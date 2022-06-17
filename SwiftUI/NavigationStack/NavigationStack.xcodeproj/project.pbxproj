@@ -11,6 +11,7 @@
 		E22011D7285C90BB008CAA4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22011D6285C90BB008CAA4F /* ContentView.swift */; };
 		E22011D9285C90BC008CAA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22011D8285C90BC008CAA4F /* Assets.xcassets */; };
 		E22011DC285C90BC008CAA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22011DB285C90BC008CAA4F /* Preview Assets.xcassets */; };
+		E22011E3285C9271008CAA4F /* CustomIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22011E2285C9271008CAA4F /* CustomIconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E22011D6285C90BB008CAA4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E22011D8285C90BC008CAA4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22011DB285C90BC008CAA4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E22011E2285C9271008CAA4F /* CustomIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E22011D4285C90BB008CAA4F /* NavigationStackApp.swift */,
 				E22011D6285C90BB008CAA4F /* ContentView.swift */,
+				E22011E2285C9271008CAA4F /* CustomIconView.swift */,
 				E22011D8285C90BC008CAA4F /* Assets.xcassets */,
 				E22011DA285C90BC008CAA4F /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22011E3285C9271008CAA4F /* CustomIconView.swift in Sources */,
 				E22011D7285C90BB008CAA4F /* ContentView.swift in Sources */,
 				E22011D5285C90BB008CAA4F /* NavigationStackApp.swift in Sources */,
 			);
