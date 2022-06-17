@@ -12,6 +12,9 @@
 		E22011D9285C90BC008CAA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22011D8285C90BC008CAA4F /* Assets.xcassets */; };
 		E22011DC285C90BC008CAA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22011DB285C90BC008CAA4F /* Preview Assets.xcassets */; };
 		E22011E3285C9271008CAA4F /* CustomIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22011E2285C9271008CAA4F /* CustomIconView.swift */; };
+		E2EC8C4F285CA64E00991296 /* NavigationStackPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC8C4E285CA64E00991296 /* NavigationStackPlay.swift */; };
+		E2EC8C51285CBB7900991296 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC8C50285CBB7900991296 /* Device.swift */; };
+		E2EC8C53285CBE4700991296 /* DeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC8C52285CBE4700991296 /* DeviceDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		E22011D8285C90BC008CAA4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22011DB285C90BC008CAA4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E22011E2285C9271008CAA4F /* CustomIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconView.swift; sourceTree = "<group>"; };
+		E2EC8C4E285CA64E00991296 /* NavigationStackPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPlay.swift; sourceTree = "<group>"; };
+		E2EC8C50285CBB7900991296 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		E2EC8C52285CBE4700991296 /* DeviceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 		E22011C8285C90BA008CAA4F = {
 			isa = PBXGroup;
 			children = (
+				E2EC8C52285CBE4700991296 /* DeviceDetail.swift */,
 				E22011D3285C90BA008CAA4F /* NavigationStack */,
 				E22011D2285C90BA008CAA4F /* Products */,
 			);
@@ -56,6 +63,8 @@
 				E22011D4285C90BB008CAA4F /* NavigationStackApp.swift */,
 				E22011D6285C90BB008CAA4F /* ContentView.swift */,
 				E22011E2285C9271008CAA4F /* CustomIconView.swift */,
+				E2EC8C4E285CA64E00991296 /* NavigationStackPlay.swift */,
+				E2EC8C50285CBB7900991296 /* Device.swift */,
 				E22011D8285C90BC008CAA4F /* Assets.xcassets */,
 				E22011DA285C90BC008CAA4F /* Preview Content */,
 			);
@@ -142,7 +151,10 @@
 			files = (
 				E22011E3285C9271008CAA4F /* CustomIconView.swift in Sources */,
 				E22011D7285C90BB008CAA4F /* ContentView.swift in Sources */,
+				E2EC8C53285CBE4700991296 /* DeviceDetail.swift in Sources */,
+				E2EC8C4F285CA64E00991296 /* NavigationStackPlay.swift in Sources */,
 				E22011D5285C90BB008CAA4F /* NavigationStackApp.swift in Sources */,
+				E2EC8C51285CBB7900991296 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
