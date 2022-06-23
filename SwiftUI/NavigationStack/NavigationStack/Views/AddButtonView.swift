@@ -19,7 +19,7 @@ struct AddButtonView: View {
                 Text("Add")
             }
         }.sheet(isPresented: $isSheetShown) {
-            CustomIconView()
+            NotationFile()
         }
     }
 }
