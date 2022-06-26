@@ -13,7 +13,7 @@ enum Category: String, CaseIterable, Identifiable {
     case iPad = "iPad"
     case macBook = "MacBook"
 }
-
+@available(iOS 16, *)
 struct NavigationStackPlay: View {
     
     var body: some View {
@@ -40,6 +40,8 @@ struct NavigationStackPlay: View {
 
 struct NavigationStack_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStackPlay()
+        if #available(iOS 16, *) {
+            NavigationStackPlay()
+        }
     }
 }

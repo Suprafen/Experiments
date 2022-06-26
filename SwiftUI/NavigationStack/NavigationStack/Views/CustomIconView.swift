@@ -24,8 +24,9 @@ struct CustomIconView: View {
             Text(description)
         }
         .background(in: Circle().inset(by: -20))
-        .backgroundStyle(color.gradient)
-        .foregroundStyle(.white.shadow(.drop(radius: 1, y: 1.5)))
+        // Only for iOS 16
+//        .backgroundStyle(color.gradient)
+//        .foregroundStyle(.white.shadow(.drop(radius: 1, y: 1.5)))
         .padding(20)
     }
 }
