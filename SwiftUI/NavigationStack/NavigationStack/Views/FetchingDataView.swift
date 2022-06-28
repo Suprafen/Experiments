@@ -11,14 +11,9 @@ class FetchingDataViewModel: ObservableObject {
     @Published var dataArray: [String] = []
     @Published var isLoading: Bool = false
     func fetchData(query: String)  {
-        DispatchQueue.global(qos: .background).async {
-            var data: [String] = []
-            DispatchQueue.main.async {
-                data = []
-            }
-        
-        
-            data = self.downloadData().filter { item in
+
+        Task {
+            var data = await self.downloadData().filter { item in
                 item.prefix(query.count).contains(query)
             }
         
@@ -30,7 +25,7 @@ class FetchingDataViewModel: ObservableObject {
         }
     }
     
-    private func downloadData() -> [String] {
+    private func downloadData() async -> [String] {
         var data: [String] = []
         
         for x in 0...1_000_000 {
@@ -40,13 +35,8 @@ class FetchingDataViewModel: ObservableObject {
     }
 }
 
-
-//                    viewModel.dataArray.isEmpty ? true : $0.prefix(queryText.count).contains(queryText)
-//                    self.items.isEmpty ? true : String($0).prefix(queryText.count).contains(queryText)
-
 struct FetchingDataView: View {
     @State var queryText: String = ""
-//    @State var isLoading: Bool = false
     @State var rowChosen: String = ""
     @ObservedObject var viewModel = FetchingDataViewModel()
     
@@ -55,24 +45,19 @@ struct FetchingDataView: View {
             SearchBarView(queryText: $queryText)
                 .environmentObject(viewModel)
 
-                ForEach($viewModel.dataArray, id: \.self) { item in
-                    Button {
-                        rowChosen = item.wrappedValue
-                    } label: {
-                        HStack {
-                            Text(item.wrappedValue)
-                            Spacer()
-                            if rowChosen == item.wrappedValue { Circle().scale(0.1).foregroundColor(.blue.opacity(0.1)) }
-                        }
+            if viewModel.isLoading {Text("Loading BTW")} else {    ForEach($viewModel.dataArray, id: \.self) { item in
+                Button {
+                    rowChosen = item.wrappedValue
+                } label: {
+                    HStack {
+                        Text(item.wrappedValue)
+                        Spacer()
+                        if rowChosen == item.wrappedValue { Circle().scale(0.1).foregroundColor(.blue.opacity(0.1)) }
                     }
                 }
-        }.overlay {
-            if viewModel.isLoading {
-                ProgressView("Loading...")
-                    .progressViewStyle(CircularProgressViewStyle())
+            }
             }
         }
-        .animation(.default, value: viewModel.dataArray)
         .listStyle(.plain)
     }
 }
@@ -90,8 +75,8 @@ struct SearchBarView: View {
                         .offset(x: 10)
                         .foregroundColor(.gray)
                         .onTapGesture {
-                            viewModel.dataArray = []
                             viewModel.isLoading = true
+                            viewModel.dataArray = []
                             viewModel.fetchData(query: queryText)
                         }, alignment: .trailing
                 )
