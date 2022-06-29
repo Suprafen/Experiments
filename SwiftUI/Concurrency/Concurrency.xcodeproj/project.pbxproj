@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E24D7203286B2C7000616439 /* ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D7202286B2C7000616439 /* ConcurrencyApp.swift */; };
-		E24D7205286B2C7000616439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D7204286B2C7000616439 /* ContentView.swift */; };
+		E24D7205286B2C7000616439 /* AsyncProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D7204286B2C7000616439 /* AsyncProperty.swift */; };
 		E24D7207286B2C7200616439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24D7206286B2C7200616439 /* Assets.xcassets */; };
 		E24D720A286B2C7200616439 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24D7209286B2C7200616439 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		E24D71FF286B2C7000616439 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24D7202286B2C7000616439 /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
-		E24D7204286B2C7000616439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E24D7204286B2C7000616439 /* AsyncProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProperty.swift; sourceTree = "<group>"; };
 		E24D7206286B2C7200616439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E24D7209286B2C7200616439 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				E24D7202286B2C7000616439 /* ConcurrencyApp.swift */,
-				E24D7204286B2C7000616439 /* ContentView.swift */,
+				E24D7204286B2C7000616439 /* AsyncProperty.swift */,
 				E24D7206286B2C7200616439 /* Assets.xcassets */,
 				E24D7208286B2C7200616439 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E24D7205286B2C7000616439 /* ContentView.swift in Sources */,
+				E24D7205286B2C7000616439 /* AsyncProperty.swift in Sources */,
 				E24D7203286B2C7000616439 /* ConcurrencyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
