@@ -11,7 +11,7 @@ import SwiftUI
 struct NavigationStackApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStackPlay()
+            FetchingDataView()
         }
     }
 }
