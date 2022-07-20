@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E219643B2885AC3100296BDA /* Continuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219643A2885AC3100296BDA /* Continuation.swift */; };
 		E24D7203286B2C7000616439 /* ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D7202286B2C7000616439 /* ConcurrencyApp.swift */; };
 		E24D7205286B2C7000616439 /* AsyncProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D7204286B2C7000616439 /* AsyncProperty.swift */; };
 		E24D7207286B2C7200616439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24D7206286B2C7200616439 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E219643A2885AC3100296BDA /* Continuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continuation.swift; sourceTree = "<group>"; };
 		E24D71FF286B2C7000616439 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24D7202286B2C7000616439 /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
 		E24D7204286B2C7000616439 /* AsyncProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProperty.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				E24D7202286B2C7000616439 /* ConcurrencyApp.swift */,
 				E24D7204286B2C7000616439 /* AsyncProperty.swift */,
+				E219643A2885AC3100296BDA /* Continuation.swift */,
 				E24D7206286B2C7200616439 /* Assets.xcassets */,
 				E24D7208286B2C7200616439 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E219643B2885AC3100296BDA /* Continuation.swift in Sources */,
 				E24D7205286B2C7000616439 /* AsyncProperty.swift in Sources */,
 				E24D7203286B2C7000616439 /* ConcurrencyApp.swift in Sources */,
 			);
