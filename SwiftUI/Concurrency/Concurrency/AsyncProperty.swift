@@ -68,4 +68,17 @@ struct AsyncProperty: View {
         }
     }
     
+    func tasking() async {
+        let newTask = Task(priority: .background) { () -> Int in
+            print("Some stuff goes here!")
+            
+            return 100_000
+        }
+        do {
+            let valueFromTask = await newTask.value
+        } catch {
+            print(error)
+        }
+    }
+    
 }
