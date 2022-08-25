@@ -10,13 +10,13 @@ import SwiftUI
 
 struct Continuation: View {
     
-    struct Message: Decodable, Identifiable {
+    private struct Message: Decodable, Identifiable {
         let id: Int
         let from: String
         let message: String
     }
 
-    @State var messages: [Message] = []
+    @State private var messages: [Message] = []
     
     var body: some View {
         List(messages, id: \.self.id) { message in
@@ -45,7 +45,7 @@ struct Continuation: View {
         }
     }
     
-    func fetchMessages(completion: @escaping ([Message]) -> Void) {
+    private func fetchMessages(completion: @escaping ([Message]) -> Void) {
         let url = URL(string: "https://hws.dev/user-messages.json")!
         
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -59,7 +59,7 @@ struct Continuation: View {
         }.resume()
     }
     
-    func fetchMessages() async -> [Message] {
+    private func fetchMessages() async -> [Message] {
         await withCheckedContinuation{ continuation in
             fetchMessages { messages in
                 continuation.resume(returning: messages)

@@ -16,7 +16,7 @@ extension URLSession {
     }()
 }
 
-struct RemoteFile<T: Decodable> {
+fileprivate struct RemoteFile<T: Decodable> {
     let url: URL
     let type: T.Type
     
@@ -28,7 +28,7 @@ struct RemoteFile<T: Decodable> {
     }
 }
 
-struct Message: Decodable, Identifiable {
+fileprivate struct Message: Decodable, Identifiable {
     let id: Int
     let user: String
     let text: String
@@ -36,7 +36,7 @@ struct Message: Decodable, Identifiable {
 
 
 struct AsyncProperty: View {
-    let source = RemoteFile(url: URL(string: "https://hws.dev/inbox.json")!, type: [Message].self)
+    private let source = RemoteFile(url: URL(string: "https://hws.dev/inbox.json")!, type: [Message].self)
     @State private var messages = [Message]()
     
     var body: some View {
