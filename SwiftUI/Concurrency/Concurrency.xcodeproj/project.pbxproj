@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E219643B2885AC3100296BDA /* Continuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219643A2885AC3100296BDA /* Continuation.swift */; };
+		E246C44A28C8BC260068B7CC /* TasksResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246C44928C8BC260068B7CC /* TasksResult.swift */; };
 		E24D7203286B2C7000616439 /* ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D7202286B2C7000616439 /* ConcurrencyApp.swift */; };
 		E24D7205286B2C7000616439 /* AsyncProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D7204286B2C7000616439 /* AsyncProperty.swift */; };
 		E24D7207286B2C7200616439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24D7206286B2C7200616439 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		E219643A2885AC3100296BDA /* Continuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continuation.swift; sourceTree = "<group>"; };
+		E246C44928C8BC260068B7CC /* TasksResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksResult.swift; sourceTree = "<group>"; };
 		E24D71FF286B2C7000616439 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24D7202286B2C7000616439 /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
 		E24D7204286B2C7000616439 /* AsyncProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProperty.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				E2D150A628B7BC4900A6E416 /* Tasks.swift */,
 				E2D150A928B7BCF200A6E416 /* SupportingFile.swift */,
+				E246C44928C8BC260068B7CC /* TasksResult.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				E2D150AA28B7BCF200A6E416 /* SupportingFile.swift in Sources */,
 				E2D150A728B7BC4900A6E416 /* Tasks.swift in Sources */,
 				E219643B2885AC3100296BDA /* Continuation.swift in Sources */,
+				E246C44A28C8BC260068B7CC /* TasksResult.swift in Sources */,
 				E24D7205286B2C7000616439 /* AsyncProperty.swift in Sources */,
 				E24D7203286B2C7000616439 /* ConcurrencyApp.swift in Sources */,
 			);
