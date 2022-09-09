@@ -56,23 +56,9 @@ func fetchQuotes(completion: @escaping (String) -> ()) async {
 struct TasksResult: View {
     @State var quotes: String = ""
     var body: some View {
-        VStack {
-            Button {
-                Task {
-                    await fetchQuotes { content in
-                        self.quotes = content
-                    }
-                }
-            } label: {
-                HStack {
-                    Image(systemName: "square.and.arrow.down")
-                    Text("Get data.")
-                }
-                .foregroundColor(.green)
-            }
-            ScrollView {
-                Text(quotes)
-                    .italic()
+        NavigationStack {
+            VStack {
+                Text("")
             }
         }
     }
