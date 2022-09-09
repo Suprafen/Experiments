@@ -13,7 +13,7 @@ enum LoadError: Error {
     case fetchFailed, decodeFailed
 }
 
-struct Post: Codable, Identifiable, Hashable {
+fileprivate struct Post: Codable, Identifiable, Hashable {
     var userId: Int
     var id: Int
     var title: String
@@ -29,7 +29,7 @@ struct Post: Codable, Identifiable, Hashable {
 
 struct TasksResult: View {
     @State var quotes: String = ""
-    @State var posts: [Post] = []
+    @State fileprivate var posts: [Post] = []
     @State var isLoading: Bool = false
     var body: some View {
         if isLoading {

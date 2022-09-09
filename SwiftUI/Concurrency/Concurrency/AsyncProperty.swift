@@ -7,78 +7,97 @@
 
 import SwiftUI
 
-extension URLSession {
-    static let noCacheSession: URLSession = {
-        let config = URLSessionConfiguration.default
-        config.requestCachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        
-        return URLSession(configuration: config)
-    }()
-}
-
-fileprivate struct RemoteFile<T: Decodable> {
-    let url: URL
-    let type: T.Type
+fileprivate struct Post: Codable, Identifiable, Hashable {
+    var userId: Int
+    var id: Int
+    var title: String
+    var body: String
     
-    var contents: T {
-        get async throws {
-            let (data, _) = try await URLSession.noCacheSession.data(from: url)
-            return try JSONDecoder().decode(T.self, from: data)
-        }
+    enum CodingKeys: String, CodingKey {
+        case userId
+        case id
+        case title
+        case body
     }
 }
 
-fileprivate struct Message: Decodable, Identifiable {
-    let id: Int
-    let user: String
-    let text: String
+fileprivate struct Comment: Codable, Identifiable, Hashable {
+    var postId: Int
+    var id: Int
+    var name: String
+    var email: String
+    var body: String
+    
+    enum CodingKeys: String, CodingKey {
+        case postId
+        case id
+        case name
+        case email
+        case body
+    }
 }
 
 
-struct AsyncProperty: View {
-    private let source = RemoteFile(url: URL(string: "https://hws.dev/inbox.json")!, type: [Message].self)
-    @State private var messages = [Message]()
+struct AsyncPropertyView: View {
+    @State fileprivate var posts = [Post]()
+    @State fileprivate var comments = [Comment]()
     
     var body: some View {
-        NavigationView {
-            List(messages) { message in
-                VStack(alignment: .leading) {
-                    Text(message.user)
-                        .font(.headline)
-                    Text(message.text)
+        NavigationStack {
+            List(posts) { post in
+                NavigationLink(value: post) {
+                    VStack {
+                        HStack {
+                            Text(post.title)
+                            Text("\(post.id)")
+                        }
+                        .padding(10)
+                    }
                 }
             }
-            .navigationTitle("Inbox")
-            .toolbar {
-                Button(action: refresh) {
-                    Label("Refresh", systemImage: "arrow.clockwise")
+            .navigationDestination(for: Post.self) { post in
+                List {
+                    Text(post.body)
                 }
             }
-            .onAppear(perform: refresh)
+            Divider()
+            List (comments) { comment in
+                VStack {
+                    HStack {
+                        Text(comment.name).font(.body)
+                        Text(comment.email).font(.body)
+                    }
+                    HStack {
+                        Text(comment.body).italic()
+                    }
+                }
+            }
         }
-    }
-
-    func refresh() {
-        Task {
-            do {
-                messages = try await source.contents
-            } catch {
-                print("Message update failed.")
+        .onAppear {
+            if posts.isEmpty || comments.isEmpty {
+                Task {
+                    await getData()
+                }
             }
         }
     }
     
-    func tasking() async {
-        let newTask = Task(priority: .background) { () -> Int in
-            print("Some stuff goes here!")
-            
-            return 100_000
-        }
+    func getData() async {
+        async let (posts, _) = URLSession.shared.data(from: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
+        async let (comments, _) = URLSession.shared.data(from: URL(string: "https://jsonplaceholder.typicode.com/comments")!)
+        
         do {
-            let valueFromTask = await newTask.value
+            let posts = try await JSONDecoder().decode([Post].self, from: posts)
+            self.posts = posts
         } catch {
-            print(error)
+            print(error.localizedDescription)
+        }
+        
+        do {
+            let comments = try await JSONDecoder().decode([Comment].self, from: comments)
+            self.comments = comments
+        } catch {
+            print(error.localizedDescription)
         }
     }
-    
 }
