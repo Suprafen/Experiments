@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  General
+//  Test
 //
-//  Created by Ivan Pryhara on 8.09.22.
+//  Created by Ivan Pryhara on 18.09.22.
 //
 
 import SwiftUI
@@ -29,3 +29,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

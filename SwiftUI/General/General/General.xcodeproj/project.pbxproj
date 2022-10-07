@@ -13,10 +13,6 @@
 		E2E585E328C9FB0B0099E204 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E585E228C9FB0B0099E204 /* Preview Assets.xcassets */; };
 		E2E585F028C9FB430099E204 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E585EF28C9FB430099E204 /* WidgetKit.framework */; };
 		E2E585F228C9FB430099E204 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E585F128C9FB430099E204 /* SwiftUI.framework */; };
-		E2E585F528C9FB430099E204 /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E585F428C9FB430099E204 /* OrderStatus.swift */; };
-		E2E585F828C9FB450099E204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E585F728C9FB450099E204 /* Assets.xcassets */; };
-		E2E585FA28C9FB450099E204 /* OrderStatus.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E2E585F628C9FB430099E204 /* OrderStatus.intentdefinition */; };
-		E2E585FB28C9FB450099E204 /* OrderStatus.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E2E585F628C9FB430099E204 /* OrderStatus.intentdefinition */; };
 		E2E585FE28C9FB450099E204 /* OrderStatusExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E2E585ED28C9FB430099E204 /* OrderStatusExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2E5860528C9FC600099E204 /* OrderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E5860428C9FC600099E204 /* OrderAttributes.swift */; };
 		E2E5860628C9FC660099E204 /* OrderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E5860428C9FC600099E204 /* OrderAttributes.swift */; };
@@ -55,10 +51,6 @@
 		E2E585ED28C9FB430099E204 /* OrderStatusExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OrderStatusExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E585EF28C9FB430099E204 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		E2E585F128C9FB430099E204 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		E2E585F428C9FB430099E204 /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
-		E2E585F628C9FB430099E204 /* OrderStatus.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = OrderStatus.intentdefinition; sourceTree = "<group>"; };
-		E2E585F728C9FB450099E204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E2E585F928C9FB450099E204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E5860428C9FC600099E204 /* OrderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				E2E585DA28C9FB090099E204 /* General */,
-				E2E585F328C9FB430099E204 /* OrderStatus */,
 				E2E585EE28C9FB430099E204 /* Frameworks */,
 				E2E585D928C9FB090099E204 /* Products */,
 			);
@@ -128,17 +119,6 @@
 				E2E585F128C9FB430099E204 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E2E585F328C9FB430099E204 /* OrderStatus */ = {
-			isa = PBXGroup;
-			children = (
-				E2E585F428C9FB430099E204 /* OrderStatus.swift */,
-				E2E585F628C9FB430099E204 /* OrderStatus.intentdefinition */,
-				E2E585F728C9FB450099E204 /* Assets.xcassets */,
-				E2E585F928C9FB450099E204 /* Info.plist */,
-			);
-			path = OrderStatus;
 			sourceTree = "<group>";
 		};
 		E2E5860328C9FC3E0099E204 /* Model */ = {
@@ -239,7 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2E585F828C9FB450099E204 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2E585FB28C9FB450099E204 /* OrderStatus.intentdefinition in Sources */,
 				E2E585DE28C9FB090099E204 /* ContentView.swift in Sources */,
 				E2E585DC28C9FB090099E204 /* GeneralApp.swift in Sources */,
 				E2E5860528C9FC600099E204 /* OrderAttributes.swift in Sources */,
@@ -262,8 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E5860628C9FC660099E204 /* OrderAttributes.swift in Sources */,
-				E2E585F528C9FB430099E204 /* OrderStatus.swift in Sources */,
-				E2E585FA28C9FB450099E204 /* OrderStatus.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

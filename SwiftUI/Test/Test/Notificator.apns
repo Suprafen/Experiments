@@ -1,0 +1,12 @@
+
+{
+    "aps" : {
+        "alert" : {
+            "title" : "Notification title",
+            "body" : "Notification body!"
+        },
+        "badge" : 0
+    },
+    "Simulator Target Bundle" :
+    "kattyrina77-gmail.com.Test"
+}
