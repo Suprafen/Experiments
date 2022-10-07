@@ -10,7 +10,18 @@ import UIKit
 import AVFoundation
 import Photos
 
-class VideoStreamViewController: UIViewController {
+// MARK: Important goals at this moment.
+//TODO: Separate the file into as many files as needed to ensure that each class has own file
+//TODO: Check what happened to capture button and fix the bug
+//TODO: Make it's possible to scroll through all photos you've done in the app. On camera view or on main one. (You can use either scroll view with horizontal alignement or collection view)
+
+
+//MARK: Long term goals
+// TODO: Make custom image picker.
+// TODO: Make live camera stream a part of collection view with images from your custom picker.
+
+
+class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
     
     var session: AVCaptureSession?
     
@@ -146,6 +157,10 @@ class VideoStreamViewController: UIViewController {
             capturePhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
     }
+    
+    func getPhoto(_ image: UIImage) {
+        session?.startRunning()
+    }
 }
 //MARK: Selectors
 extension VideoStreamViewController {
@@ -164,10 +179,11 @@ extension VideoStreamViewController: AVCapturePhotoCaptureDelegate {
         
         // How to come up with this to stop the session while user decides about the photo.
         // But continue the session when they dismissed the view that contains the photo itself.
-//        session?.stopRunning()
+        session?.stopRunning()
         
         //TODO: Remove force unwrapping!
         let controllerToPresent = CapturedPhoto(image: image!)
+        controllerToPresent.delegate = self
         controllerToPresent.modalPresentationStyle = .fullScreen
         
         present(controllerToPresent, animated: false)
@@ -180,10 +196,16 @@ extension VideoStreamViewController: AVCapturePhotoCaptureDelegate {
     }
 }
 
+protocol CapturedPhotoDelegate {
+    func getPhoto(_ image: UIImage)
+}
+
 // MARK: Captured Photo Controller
 class CapturedPhoto: UIViewController {
     
     var image: UIImage
+    
+    var delegate: CapturedPhotoDelegate?
     
     let presentedPhotoView: UIImageView = {
        let imageView = UIImageView()
@@ -231,6 +253,7 @@ class CapturedPhoto: UIViewController {
     }
 
     @objc func dismissView() {
+        delegate?.getPhoto(image)
         self.dismiss(animated: true)
     }
 }
