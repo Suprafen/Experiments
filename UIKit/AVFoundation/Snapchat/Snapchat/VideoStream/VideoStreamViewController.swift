@@ -11,12 +11,12 @@ import AVFoundation
 import Photos
 
 // MARK: Important goals at this moment.
-//TODO: Separate the file into as many files as needed to ensure that each class has own file
-//TODO: Check what happened to capture button and fix the bug
-//TODO: Make it's possible to scroll through all photos you've done in the app. On camera view or on main one. (You can use either scroll view with horizontal alignement or collection view)
+// TODO: Separate the file into as many files as needed to ensure that each class has own file
+// TODO: Check what happened to capture button and fix the bug
+// TODO: Make it's possible to scroll through all photos you've done in the app. On camera view or on main one. (You can use either scroll view with horizontal alignement or collection view)
 
 
-//MARK: Long term goals
+// MARK: Long term goals
 // TODO: Make custom image picker.
 // TODO: Make live camera stream a part of collection view with images from your custom picker.
 
@@ -51,6 +51,7 @@ class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
         view.addSubview(capturePhotoButton)
         
         checkCameraPersmissions()
+        checkPHPhotoLibraryPermissions()
         previewLayer.backgroundColor = UIColor.systemRed.cgColor
         
     }
@@ -182,7 +183,7 @@ extension VideoStreamViewController: AVCapturePhotoCaptureDelegate {
         session?.stopRunning()
         
         //TODO: Remove force unwrapping!
-        let controllerToPresent = CapturedPhoto(image: image!)
+        let controllerToPresent = CapturedPhotoController(image: image!)
         controllerToPresent.delegate = self
         controllerToPresent.modalPresentationStyle = .fullScreen
         
@@ -193,67 +194,5 @@ extension VideoStreamViewController: AVCapturePhotoCaptureDelegate {
             let creationRequest = PHAssetCreationRequest.forAsset()
             creationRequest.addResource(with: .photo, data: data, options: nil)
         }
-    }
-}
-
-protocol CapturedPhotoDelegate {
-    func getPhoto(_ image: UIImage)
-}
-
-// MARK: Captured Photo Controller
-class CapturedPhoto: UIViewController {
-    
-    var image: UIImage
-    
-    var delegate: CapturedPhotoDelegate?
-    
-    let presentedPhotoView: UIImageView = {
-       let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        
-        return imageView
-    }()
-    
-    let dismissButton: UIButton = {
-        var buttonConfig = UIButton.Configuration.plain()
-        let button = UIButton()
-        buttonConfig.title = "Dismiss"
-        button.backgroundColor = .white
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(nil, action: #selector(dismissView), for: .touchUpInside)
-        
-        return button
-    }()
-    
-    init(image: UIImage) {
-        self.image = image
-        super.init(nibName: nil, bundle: nil)
-    }
-     
-    required init?(coder: NSCoder) {
-        fatalError("Oh nooo!!!")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        presentedPhotoView.image = image
-        view.addSubview(presentedPhotoView)
-        view.addSubview(dismissButton)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        presentedPhotoView.frame = view.frame
-        
-        NSLayoutConstraint.activate([
-            dismissButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            dismissButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
-        ])
-    }
-
-    @objc func dismissView() {
-        delegate?.getPhoto(image)
-        self.dismiss(animated: true)
     }
 }

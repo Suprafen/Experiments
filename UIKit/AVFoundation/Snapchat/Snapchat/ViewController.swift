@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        
-        
         view.addSubview(showVideoStreamButton)
 
         showVideoStreamButton.addTarget(self, action: #selector(showVideoStream), for: .touchUpInside)

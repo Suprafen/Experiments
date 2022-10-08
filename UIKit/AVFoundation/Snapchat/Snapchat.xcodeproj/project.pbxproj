@@ -13,7 +13,8 @@
 		E2888BA128EDCEB500B40721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2888B9F28EDCEB500B40721 /* Main.storyboard */; };
 		E2888BA328EDCEB700B40721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2888BA228EDCEB700B40721 /* Assets.xcassets */; };
 		E2888BA628EDCEB700B40721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2888BA428EDCEB700B40721 /* LaunchScreen.storyboard */; };
-		E2888BB028EDDCF900B40721 /* VideoStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2888BAF28EDDCF900B40721 /* VideoStreamView.swift */; };
+		E2888BB028EDDCF900B40721 /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2888BAF28EDDCF900B40721 /* VideoStreamViewController.swift */; };
+		E2888BC228F1830800B40721 /* CapturedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2888BC128F1830800B40721 /* CapturedPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		E2888BA228EDCEB700B40721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2888BA528EDCEB700B40721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2888BA728EDCEB700B40721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2888BAF28EDDCF900B40721 /* VideoStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamView.swift; sourceTree = "<group>"; };
+		E2888BAF28EDDCF900B40721 /* VideoStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
+		E2888BC128F1830800B40721 /* CapturedPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +75,18 @@
 		E2888BAD28EDDC8E00B40721 /* VideoStream */ = {
 			isa = PBXGroup;
 			children = (
-				E2888BAF28EDDCF900B40721 /* VideoStreamView.swift */,
+				E2888BC028F182EA00B40721 /* PhotoCapturing */,
+				E2888BAF28EDDCF900B40721 /* VideoStreamViewController.swift */,
 			);
 			path = VideoStream;
+			sourceTree = "<group>";
+		};
+		E2888BC028F182EA00B40721 /* PhotoCapturing */ = {
+			isa = PBXGroup;
+			children = (
+				E2888BC128F1830800B40721 /* CapturedPhotoViewController.swift */,
+			);
+			path = PhotoCapturing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +162,8 @@
 			files = (
 				E2888B9E28EDCEB500B40721 /* ViewController.swift in Sources */,
 				E2888B9A28EDCEB500B40721 /* AppDelegate.swift in Sources */,
-				E2888BB028EDDCF900B40721 /* VideoStreamView.swift in Sources */,
+				E2888BC228F1830800B40721 /* CapturedPhotoViewController.swift in Sources */,
+				E2888BB028EDDCF900B40721 /* VideoStreamViewController.swift in Sources */,
 				E2888B9C28EDCEB500B40721 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
