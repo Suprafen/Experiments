@@ -11,8 +11,6 @@ import AVFoundation
 import Photos
 
 // MARK: Important goals at this moment.
-// TODO: Separate the file into as many files as needed to ensure that each class has own file
-// TODO: Check what happened to capture button and fix the bug
 // TODO: Make it's possible to scroll through all photos you've done in the app. On camera view or on main one. (You can use either scroll view with horizontal alignement or collection view)
 
 
@@ -31,23 +29,30 @@ class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
     
     
     let capturePhotoButton: UIButton = {
-        let sideSize = 200
-        
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: sideSize, height: sideSize))
-        button.layer.cornerRadius = CGFloat(sideSize / 2)
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        button.layer.cornerRadius =  button.frame.width/2
         button.backgroundColor = .white
-        button.translatesAutoresizingMaskIntoConstraints = false
+        
         button.addTarget(nil, action: #selector(capturePhoto), for: .touchUpInside)
         
         return button
     }()
     
+    let capturePhotoButtonBorder: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        view.layer.cornerRadius = view.frame.width/2
+        view.layer.borderWidth = 5
+        view.layer.borderColor = UIColor.white.cgColor
+        
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
+        view.addSubview(capturePhotoButtonBorder)
         view.addSubview(capturePhotoButton)
         
         checkCameraPersmissions()
@@ -58,9 +63,10 @@ class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        previewLayer.frame = view.frame
+        previewLayer.frame = view.bounds
         
-        setConstraints()
+        capturePhotoButtonBorder.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - 100)
+        capturePhotoButton.center = capturePhotoButtonBorder.center
     }
     
     private func checkPHPhotoLibraryPermissions() {
@@ -148,15 +154,6 @@ class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
             }
         }
         
-    }
-    
-    private func setConstraints() {
-        
-        let margins = view.layoutMarginsGuide
-        NSLayoutConstraint.activate([
-            capturePhotoButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20),
-            capturePhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
     }
     
     func getPhoto(_ image: UIImage) {

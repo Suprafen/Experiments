@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     @objc func showVideoStream() {
         let controllerToPresent = VideoStreamViewController()
         if let sheet = controllerToPresent.sheetPresentationController {
-            sheet.detents = [.medium(), .large()]
+            sheet.detents = [.large()]
             sheet.preferredCornerRadius = 15
         }
         
