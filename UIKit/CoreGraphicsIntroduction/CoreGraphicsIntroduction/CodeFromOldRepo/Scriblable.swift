@@ -31,14 +31,14 @@ class ScribbleView: UIView
     {
         super.init(frame: CGRectZero)
         
-    backgroundLayer.strokeColor = UIColor.gray.cgColor
+    backgroundLayer.strokeColor = UIColor.black.cgColor
         backgroundLayer.fillColor = nil
-        backgroundLayer.lineWidth = 2
-        
+        backgroundLayer.lineWidth = 10
+    backgroundLayer.lineCap = .round
         drawingLayer.strokeColor = UIColor.black.cgColor
         drawingLayer.fillColor = nil
-        drawingLayer.lineWidth = 2
-        
+        drawingLayer.lineWidth = 10
+    drawingLayer.lineCap = .round
         layer.addSublayer(backgroundLayer)
         layer.addSublayer(drawingLayer)
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E211662B28FC0ED0000EBAF2 /* DragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E211662A28FC0ED0000EBAF2 /* DragViewController.swift */; };
 		E21D56CB28F5BC800093CC9F /* XiaolinWuAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D56CA28F5BC800093CC9F /* XiaolinWuAlgorithm.swift */; };
 		E21D56CE28F749330093CC9F /* Scriblable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D56CD28F749330093CC9F /* Scriblable.swift */; };
 		E21D56D028F749BB0093CC9F /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D56CF28F749BB0093CC9F /* BezierPathExtension.swift */; };
@@ -17,9 +18,14 @@
 		E2A8A43728F4AB0E0022853A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A8A43528F4AB0E0022853A /* Main.storyboard */; };
 		E2A8A43928F4AB100022853A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A8A43828F4AB100022853A /* Assets.xcassets */; };
 		E2A8A43C28F4AB100022853A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A8A43A28F4AB100022853A /* LaunchScreen.storyboard */; };
+		E2CBCB3728F97CB800846651 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CBCB3628F97CB800846651 /* TestViewController.swift */; };
+		E2CBCB3A28F98F8900846651 /* BezierPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CBCB3928F98F8900846651 /* BezierPathView.swift */; };
+		E2CBCB3D28F98FF300846651 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CBCB3C28F98FF300846651 /* CGRectExtension.swift */; };
+		E2CBCB3F28F9990F00846651 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CBCB3E28F9990F00846651 /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E211662A28FC0ED0000EBAF2 /* DragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewController.swift; sourceTree = "<group>"; };
 		E21D56CA28F5BC800093CC9F /* XiaolinWuAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XiaolinWuAlgorithm.swift; sourceTree = "<group>"; };
 		E21D56CD28F749330093CC9F /* Scriblable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scriblable.swift; sourceTree = "<group>"; };
 		E21D56CF28F749BB0093CC9F /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
@@ -32,6 +38,10 @@
 		E2A8A43828F4AB100022853A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2A8A43B28F4AB100022853A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2A8A43D28F4AB100022853A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CBCB3628F97CB800846651 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E2CBCB3928F98F8900846651 /* BezierPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathView.swift; sourceTree = "<group>"; };
+		E2CBCB3C28F98FF300846651 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
+		E2CBCB3E28F9990F00846651 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +58,7 @@
 		E21D56CC28F749140093CC9F /* CodeFromOldRepo */ = {
 			isa = PBXGroup;
 			children = (
+				E2A8A43328F4AB0E0022853A /* ViewController.swift */,
 				E21D56CD28F749330093CC9F /* Scriblable.swift */,
 				E21D56CF28F749BB0093CC9F /* BezierPathExtension.swift */,
 			);
@@ -81,11 +92,12 @@
 		E2A8A42E28F4AB0E0022853A /* CoreGraphicsIntroduction */ = {
 			isa = PBXGroup;
 			children = (
+				E2CBCB4028F9B0A500846651 /* DragAround */,
+				E2CBCB3528F97C9300846651 /* ApproachFromLecture */,
 				E282A9AB28F869B800386755 /* BizierPathPlayground */,
 				E21D56CC28F749140093CC9F /* CodeFromOldRepo */,
 				E2A8A42F28F4AB0E0022853A /* AppDelegate.swift */,
 				E2A8A43128F4AB0E0022853A /* SceneDelegate.swift */,
-				E2A8A43328F4AB0E0022853A /* ViewController.swift */,
 				E2A8A43528F4AB0E0022853A /* Main.storyboard */,
 				E2A8A43828F4AB100022853A /* Assets.xcassets */,
 				E2A8A43A28F4AB100022853A /* LaunchScreen.storyboard */,
@@ -93,6 +105,41 @@
 				E21D56CA28F5BC800093CC9F /* XiaolinWuAlgorithm.swift */,
 			);
 			path = CoreGraphicsIntroduction;
+			sourceTree = "<group>";
+		};
+		E2CBCB3528F97C9300846651 /* ApproachFromLecture */ = {
+			isa = PBXGroup;
+			children = (
+				E2CBCB3B28F98FE000846651 /* Library */,
+				E2CBCB3828F98F7200846651 /* HelperViews */,
+				E2CBCB3628F97CB800846651 /* TestViewController.swift */,
+				E2CBCB3E28F9990F00846651 /* DrawingView.swift */,
+			);
+			path = ApproachFromLecture;
+			sourceTree = "<group>";
+		};
+		E2CBCB3828F98F7200846651 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				E2CBCB3928F98F8900846651 /* BezierPathView.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		E2CBCB3B28F98FE000846651 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E2CBCB3C28F98FF300846651 /* CGRectExtension.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		E2CBCB4028F9B0A500846651 /* DragAround */ = {
+			isa = PBXGroup;
+			children = (
+				E211662A28FC0ED0000EBAF2 /* DragViewController.swift */,
+			);
+			path = DragAround;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +215,15 @@
 			files = (
 				E2A8A43428F4AB0E0022853A /* ViewController.swift in Sources */,
 				E21D56CE28F749330093CC9F /* Scriblable.swift in Sources */,
+				E2CBCB3728F97CB800846651 /* TestViewController.swift in Sources */,
 				E2A8A43028F4AB0E0022853A /* AppDelegate.swift in Sources */,
+				E211662B28FC0ED0000EBAF2 /* DragViewController.swift in Sources */,
 				E282A9AD28F869E800386755 /* BizierPathPlayground.swift in Sources */,
+				E2CBCB3D28F98FF300846651 /* CGRectExtension.swift in Sources */,
+				E2CBCB3A28F98F8900846651 /* BezierPathView.swift in Sources */,
 				E21D56CB28F5BC800093CC9F /* XiaolinWuAlgorithm.swift in Sources */,
 				E2A8A43228F4AB0E0022853A /* SceneDelegate.swift in Sources */,
+				E2CBCB3F28F9990F00846651 /* DrawingView.swift in Sources */,
 				E21D56D028F749BB0093CC9F /* BezierPathExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.makeKeyAndVisible()
         
-        let rootViewController = BezierPathPlayground()
+        let rootViewController = DragViewController()
         
         window?.rootViewController = rootViewController
     }
