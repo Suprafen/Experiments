@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E211663A28FFFD54000EBAF2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E211663928FFFD54000EBAF2 /* File.swift */; };
 		E264012928D8F910008881D1 /* EverythingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264012828D8F910008881D1 /* EverythingApp.swift */; };
 		E264012B28D8F910008881D1 /* PanCakesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264012A28D8F910008881D1 /* PanCakesView.swift */; };
 		E264012D28D8F911008881D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264012C28D8F911008881D1 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E211663928FFFD54000EBAF2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E264012528D8F910008881D1 /* Everything.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everything.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E264012828D8F910008881D1 /* EverythingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingApp.swift; sourceTree = "<group>"; };
 		E264012A28D8F910008881D1 /* PanCakesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanCakesView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E211663828FFFD3F000EBAF2 /* AnimatedViewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				E211663928FFFD54000EBAF2 /* File.swift */,
+			);
+			path = AnimatedViewPresenter;
+			sourceTree = "<group>";
+		};
 		E264011C28D8F910008881D1 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		E264013628D9019A008881D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E211663828FFFD3F000EBAF2 /* AnimatedViewPresenter */,
 				E264012A28D8F910008881D1 /* PanCakesView.swift */,
 				E264013728D901B5008881D1 /* CitiesChart.swift */,
 			);
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E264012B28D8F910008881D1 /* PanCakesView.swift in Sources */,
+				E211663A28FFFD54000EBAF2 /* File.swift in Sources */,
 				E264012928D8F910008881D1 /* EverythingApp.swift in Sources */,
 				E264013828D901B5008881D1 /* CitiesChart.swift in Sources */,
 			);

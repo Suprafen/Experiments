@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.makeKeyAndVisible()
         
-        let rootViewController = DragViewController()
+        let rootViewController = TextContainersViewController()
         
         window?.rootViewController = rootViewController
     }

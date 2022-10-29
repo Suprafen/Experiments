@@ -11,7 +11,7 @@ import SwiftUI
 struct EverythingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ModalContainer()
 //                .frame(height: 300)
         }
     }
