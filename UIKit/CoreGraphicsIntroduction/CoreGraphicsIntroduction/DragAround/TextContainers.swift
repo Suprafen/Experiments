@@ -11,15 +11,13 @@ import UIKit
 
 class TextContainersViewController: UIViewController {
     
-    
-    var textContainer: NSTextContainer = {
-        let textContainer = NSTextContainer(size: CGSize(width: 200, height: 200))
-        textContainer.widthTracksTextView = true
-        textContainer.heightTracksTextView = true
+    let textStorage: NSTextStorage = {
+        let attributedString = NSAttributedString(string: "Something goes here. What it can be?", attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .bold)])
         
-        return textContainer
+        let textStorage = NSTextStorage(attributedString: attributedString)
+        
+        return textStorage
     }()
-    
     
     let layoutManager: NSLayoutManager = {
         let layoutManager = NSLayoutManager()
@@ -27,36 +25,58 @@ class TextContainersViewController: UIViewController {
         return layoutManager
     }()
     
+    let textContainer: NSTextContainer = {
+        let textContainer = NSTextContainer(size: CGSize(width: 100, height: 100))
+        textContainer.lineBreakMode = .byClipping
+        textContainer.maximumNumberOfLines = 7
+        textContainer.widthTracksTextView = true
+        textContainer.heightTracksTextView = true
+        
+        return textContainer
+    }()
+    
+    let secondTextContainer: NSTextContainer = {
+        let textContainer = NSTextContainer(size: CGSize(width: 100, height: 100))
+        textContainer.lineBreakMode = .byClipping
+        textContainer.maximumNumberOfLines = 7
+        textContainer.widthTracksTextView = true
+        textContainer.heightTracksTextView = true
+        
+        return textContainer
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        
-        
-        makePreps()
+        view.backgroundColor = .orange
+    
+        viewsSetup()
     }
     
-    
-    let attributedString = NSAttributedString(string: "Something goes here. What it can be?", attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .bold)])
-    
-    
-    
-    func makePreps() {
-        layoutManager.addTextContainer(textContainer)
+    func viewsSetup() {
         
-        let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 300, height: 300),
-                                  textContainer: textContainer)
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.layer.borderWidth = 2
-        
-        let textStorage = NSTextStorage(attributedString: attributedString)
         textStorage.addLayoutManager(layoutManager)
         
-        view.addSubview(textView)
+        layoutManager.addTextContainer(textContainer)
+        layoutManager.addTextContainer(secondTextContainer)
         
-        NSLayoutConstraint.activate([
-            textView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            textView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        
+        let firstTextView = UITextView(frame: CGRect(x: 30, y: 400, width: 70, height: 200), textContainer: textContainer)
+        
+        let secondTextView = UITextView(frame: CGRect(x: 200, y: 400, width: 70, height: 200), textContainer: secondTextContainer)
+        
+//        secondTextView.is
+        
+        view.addSubview(firstTextView)
+
+        view.addSubview(secondTextView)
+        
+    }
+    
+    func textSetup() {
+        
+    }
+    
+    @objc func changeText() {
+        print("TextStorage: \(textStorage)")
     }
 }
