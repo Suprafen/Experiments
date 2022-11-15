@@ -25,15 +25,46 @@ class CapturedPhotoController: UIViewController {
         return imageView
     }()
     
-    let dismissButton: UIButton = {
-        var buttonConfig = UIButton.Configuration.plain()
-        let button = UIButton()
-        buttonConfig.title = "Dismiss"
-        button.backgroundColor = .white
-        button.translatesAutoresizingMaskIntoConstraints = false
+    let doneButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        
+        let image =  UIImage(systemName: "arrow.up")?.withRenderingMode(.alwaysTemplate)
+        
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
+        button.backgroundColor = .systemBlue
         button.addTarget(nil, action: #selector(dismissView), for: .touchUpInside)
         
         return button
+    }()
+    
+    let dismissButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "chevron.backward.circle"), for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(nil, action: #selector(dismissView), for: .touchUpInside)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
+    let buttonsStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.alignment = .center
+        stack.distribution = .equalSpacing
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stack
+    }()
+    
+    let blackView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
     }()
     
     init(image: UIImage) {
@@ -48,8 +79,14 @@ class CapturedPhotoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presentedPhotoView.image = image
+        
         view.addSubview(presentedPhotoView)
-        view.addSubview(dismissButton)
+        view.addSubview(blackView)
+        
+        view.addSubview(buttonsStack)
+
+        buttonsStack.addArrangedSubview(dismissButton)
+        buttonsStack.addArrangedSubview(doneButton)
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,12 +95,17 @@ class CapturedPhotoController: UIViewController {
         presentedPhotoView.frame = view.frame
         
         NSLayoutConstraint.activate([
-            dismissButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            dismissButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            
+            blackView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            blackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            blackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            blackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            buttonsStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            buttonsStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            buttonsStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
         ])
     }
-
-   
 }
 
 //MARK: Selectors

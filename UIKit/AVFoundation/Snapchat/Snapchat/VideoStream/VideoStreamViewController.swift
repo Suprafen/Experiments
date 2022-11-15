@@ -63,6 +63,8 @@ class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        // Here you decide what actual frame of the photo will be capture
+        // So it gives us an opportunity to add black spaces at the top and bottom of the screen for tool buttons
         previewLayer.frame = view.bounds
         
         capturePhotoButtonBorder.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - 100)
