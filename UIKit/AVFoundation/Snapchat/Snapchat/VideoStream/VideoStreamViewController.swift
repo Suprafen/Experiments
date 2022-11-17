@@ -27,6 +27,7 @@ class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
     
     let previewLayer = AVCaptureVideoPreviewLayer()
     
+    var completion: ([UIImage]) -> Void
     
     let capturePhotoButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
@@ -160,6 +161,7 @@ class VideoStreamViewController: UIViewController, CapturedPhotoDelegate {
     
     func getPhoto(_ image: UIImage) {
         session?.startRunning()
+        completion([image])
     }
 }
 //MARK: Selectors

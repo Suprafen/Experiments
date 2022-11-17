@@ -13,6 +13,7 @@
 		E264012D28D8F911008881D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264012C28D8F911008881D1 /* Assets.xcassets */; };
 		E264013028D8F911008881D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264012F28D8F911008881D1 /* Preview Assets.xcassets */; };
 		E264013828D901B5008881D1 /* CitiesChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264013728D901B5008881D1 /* CitiesChart.swift */; };
+		E275CB04292649A200680361 /* ImagesScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E275CB03292649A200680361 /* ImagesScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E264012C28D8F911008881D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E264012F28D8F911008881D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E264013728D901B5008881D1 /* CitiesChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesChart.swift; sourceTree = "<group>"; };
+		E275CB03292649A200680361 /* ImagesScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				E211663828FFFD3F000EBAF2 /* AnimatedViewPresenter */,
 				E264012A28D8F910008881D1 /* PanCakesView.swift */,
 				E264013728D901B5008881D1 /* CitiesChart.swift */,
+				E275CB03292649A200680361 /* ImagesScroll.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				E264012B28D8F910008881D1 /* PanCakesView.swift in Sources */,
 				E211663A28FFFD54000EBAF2 /* File.swift in Sources */,
 				E264012928D8F910008881D1 /* EverythingApp.swift in Sources */,
+				E275CB04292649A200680361 /* ImagesScroll.swift in Sources */,
 				E264013828D901B5008881D1 /* CitiesChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
