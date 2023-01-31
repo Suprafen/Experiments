@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E211663A28FFFD54000EBAF2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E211663928FFFD54000EBAF2 /* File.swift */; };
+		E2634226296832E2001112BF /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2634225296832E2001112BF /* Stuff.swift */; };
+		E263422E2968344C001112BF /* EverythingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E263422D2968344C001112BF /* EverythingTests.swift */; };
 		E264012928D8F910008881D1 /* EverythingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264012828D8F910008881D1 /* EverythingApp.swift */; };
 		E264012B28D8F910008881D1 /* PanCakesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264012A28D8F910008881D1 /* PanCakesView.swift */; };
 		E264012D28D8F911008881D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264012C28D8F911008881D1 /* Assets.xcassets */; };
@@ -16,8 +18,21 @@
 		E275CB04292649A200680361 /* ImagesScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E275CB03292649A200680361 /* ImagesScroll.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E263422F2968344C001112BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E264011D28D8F910008881D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E264012428D8F910008881D1;
+			remoteInfo = Everything;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E211663928FFFD54000EBAF2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		E2634225296832E2001112BF /* Stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
+		E263422B2968344C001112BF /* EverythingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverythingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E263422D2968344C001112BF /* EverythingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingTests.swift; sourceTree = "<group>"; };
 		E264012528D8F910008881D1 /* Everything.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everything.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E264012828D8F910008881D1 /* EverythingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingApp.swift; sourceTree = "<group>"; };
 		E264012A28D8F910008881D1 /* PanCakesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanCakesView.swift; sourceTree = "<group>"; };
@@ -28,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E26342282968344C001112BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E264012228D8F910008881D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +68,19 @@
 			path = AnimatedViewPresenter;
 			sourceTree = "<group>";
 		};
+		E263422C2968344C001112BF /* EverythingTests */ = {
+			isa = PBXGroup;
+			children = (
+				E263422D2968344C001112BF /* EverythingTests.swift */,
+			);
+			path = EverythingTests;
+			sourceTree = "<group>";
+		};
 		E264011C28D8F910008881D1 = {
 			isa = PBXGroup;
 			children = (
 				E264012728D8F910008881D1 /* Everything */,
+				E263422C2968344C001112BF /* EverythingTests */,
 				E264012628D8F910008881D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E264012528D8F910008881D1 /* Everything.app */,
+				E263422B2968344C001112BF /* EverythingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +97,7 @@
 		E264012728D8F910008881D1 /* Everything */ = {
 			isa = PBXGroup;
 			children = (
+				E2634225296832E2001112BF /* Stuff.swift */,
 				E264012828D8F910008881D1 /* EverythingApp.swift */,
 				E264013628D9019A008881D1 /* Views */,
 				E264012C28D8F911008881D1 /* Assets.xcassets */,
@@ -95,6 +128,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E263422A2968344C001112BF /* EverythingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E26342312968344C001112BF /* Build configuration list for PBXNativeTarget "EverythingTests" */;
+			buildPhases = (
+				E26342272968344C001112BF /* Sources */,
+				E26342282968344C001112BF /* Frameworks */,
+				E26342292968344C001112BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E26342302968344C001112BF /* PBXTargetDependency */,
+			);
+			name = EverythingTests;
+			productName = EverythingTests;
+			productReference = E263422B2968344C001112BF /* EverythingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E264012428D8F910008881D1 /* Everything */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E264013328D8F911008881D1 /* Build configuration list for PBXNativeTarget "Everything" */;
@@ -119,9 +170,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					E263422A2968344C001112BF = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E264012428D8F910008881D1;
+					};
 					E264012428D8F910008881D1 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -141,11 +196,19 @@
 			projectRoot = "";
 			targets = (
 				E264012428D8F910008881D1 /* Everything */,
+				E263422A2968344C001112BF /* EverythingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E26342292968344C001112BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E264012328D8F910008881D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +221,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E26342272968344C001112BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E263422E2968344C001112BF /* EverythingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E264012128D8F910008881D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,13 +237,66 @@
 				E211663A28FFFD54000EBAF2 /* File.swift in Sources */,
 				E264012928D8F910008881D1 /* EverythingApp.swift in Sources */,
 				E275CB04292649A200680361 /* ImagesScroll.swift in Sources */,
+				E2634226296832E2001112BF /* Stuff.swift in Sources */,
 				E264013828D901B5008881D1 /* CitiesChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E26342302968344C001112BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E264012428D8F910008881D1 /* Everything */;
+			targetProxy = E263422F2968344C001112BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E26342322968344C001112BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBL32UU3W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kattyrina77-gmail.com.EverythingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Everything.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Everything";
+			};
+			name = Debug;
+		};
+		E26342332968344C001112BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBL32UU3W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kattyrina77-gmail.com.EverythingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Everything.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Everything";
+			};
+			name = Release;
+		};
 		E264013128D8F911008881D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E26342312968344C001112BF /* Build configuration list for PBXNativeTarget "EverythingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26342322968344C001112BF /* Debug */,
+				E26342332968344C001112BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E264012028D8F910008881D1 /* Build configuration list for PBXProject "Everything" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
