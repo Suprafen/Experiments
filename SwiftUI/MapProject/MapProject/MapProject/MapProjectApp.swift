@@ -10,12 +10,14 @@ import GoogleMaps
 
 @main
 struct MapProjectApp: App {
+    
+    init() {
+        GMSServices.provideAPIKey("")
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
-                    GMSServices.provideAPIKey("")
-                }
         }
     }
 }
