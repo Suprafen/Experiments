@@ -26,7 +26,7 @@ struct MapView: UIViewControllerRepresentable {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            GMSServices.provideAPIKey("AIzaSyDnnuRNiacHJAt3lT6F3r261Go-TvjVrco")
+            GMSServices.provideAPIKey("")
             let latitude = 52.087939778280855
             let longitude = 21.024046742734747
             let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 6)

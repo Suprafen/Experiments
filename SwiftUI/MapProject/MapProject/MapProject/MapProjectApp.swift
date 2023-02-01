@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import GoogleMaps
 
 @main
 struct MapProjectApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    GMSServices.provideAPIKey("")
+                }
         }
     }
 }
