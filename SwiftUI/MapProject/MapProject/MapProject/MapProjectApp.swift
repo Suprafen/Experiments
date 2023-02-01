@@ -16,4 +16,3 @@ struct MapProjectApp: App {
     }
 }
 
-class 

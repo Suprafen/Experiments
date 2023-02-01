@@ -12,6 +12,7 @@
 		E2799BB4298968CC00EF6C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2799BB3298968CC00EF6C89 /* Assets.xcassets */; };
 		E2799BB7298968CC00EF6C89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2799BB6298968CC00EF6C89 /* Preview Assets.xcassets */; };
 		E294EFA92989738E0009278B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294EFA82989738E0009278B /* MapView.swift */; };
+		E294EFAC298AAC0E0009278B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294EFAB298AAC0E0009278B /* City.swift */; };
 		FC970DCCA3CC823215910E3B /* Pods_MapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857E8D20FDF5A69F118780B5 /* Pods_MapProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		E2799BB3298968CC00EF6C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2799BB6298968CC00EF6C89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E294EFA82989738E0009278B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E294EFAB298AAC0E0009278B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E2799BAE298968CB00EF6C89 /* MapProject */ = {
 			isa = PBXGroup;
 			children = (
+				E294EFAA298AAC020009278B /* City */,
 				E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */,
 				E2799BB1298968CB00EF6C89 /* ContentView.swift */,
 				E2799BB3298968CC00EF6C89 /* Assets.xcassets */,
@@ -92,6 +95,14 @@
 				E2799BB6298968CC00EF6C89 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E294EFAA298AAC020009278B /* City */ = {
+			isa = PBXGroup;
+			children = (
+				E294EFAB298AAC0E0009278B /* City.swift */,
+			);
+			path = City;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			files = (
 				E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */,
 				E294EFA92989738E0009278B /* MapView.swift in Sources */,
+				E294EFAC298AAC0E0009278B /* City.swift in Sources */,
 				E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
