@@ -38,7 +38,23 @@ struct ContentView: View {
     GeometryReader { geometry in
       ZStack(alignment: .top) {
         // Map
-          MapViewControllerBridge(markers: $markers)
+          let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
+          MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, onAnimationEnded: {
+              self.zoomInCenter = true
+          })
+          .clipShape(
+            Circle()
+                .size(
+                    width: diameter,
+                    height: diameter
+                )
+                .offset(
+                    CGPoint(
+                        x: (geometry.size.width - diameter) / 2,
+                        y: (geometry.size.height - diameter) / 2
+                    )
+                )
+          )
         // Cities List
         CitiesList(markers: $markers) { (marker) in
           guard self.selectedMarker != marker else { return }
@@ -117,7 +133,9 @@ struct MapContainerView: View {
   var body: some View {
     GeometryReader { geometry in
       let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
-      MapViewControllerBridge(markers: $markers)
+        MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, onAnimationEnded: {
+            self.zoomInCenter = true
+        })
       .clipShape(
         Circle()
           .size(
