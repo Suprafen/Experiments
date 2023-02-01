@@ -13,8 +13,12 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     @Binding var markers: [GMSMarker]
     @Binding var selectedMarker: GMSMarker?
     var onAnimationEnded: () -> ()
+    var mapViewWillMove: (Bool) -> ()
+    
   func makeUIViewController(context: Context) -> MapViewController {
-    return MapViewController()
+      let uiViewController = MapViewController()
+      uiViewController.map.delegate = context.coordinator
+      return uiViewController
   }
 
   func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
@@ -44,5 +48,21 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
                 }
             }
         }
+    }
+    
+    final class MapViewCoordinator: NSObject, GMSMapViewDelegate {
+        var mapViewControllerBridge: MapViewControllerBridge
+        
+        init(_ mapViewControllerBridge: MapViewControllerBridge) {
+            self.mapViewControllerBridge = mapViewControllerBridge
+        }
+        
+        func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+            self.mapViewControllerBridge.mapViewWillMove(gesture)
+        }
+    }
+    
+    func makeCoordinator() -> MapViewCoordinator {
+        return MapViewCoordinator(self)
     }
 }

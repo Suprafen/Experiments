@@ -41,6 +41,9 @@ struct ContentView: View {
           let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
           MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, onAnimationEnded: {
               self.zoomInCenter = true
+          }, mapViewWillMove: { isGesture in
+              guard isGesture else { return }
+              self.zoomInCenter = false
           })
           .clipShape(
             Circle()
@@ -135,6 +138,9 @@ struct MapContainerView: View {
       let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
         MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, onAnimationEnded: {
             self.zoomInCenter = true
+        }, mapViewWillMove: { isGesture in
+            guard isGesture else { return }
+            zoomInCenter = false
         })
       .clipShape(
         Circle()
