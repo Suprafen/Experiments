@@ -12,6 +12,9 @@ import SwiftUI
 struct MapViewControllerBridge: UIViewControllerRepresentable {
     @Binding var markers: [GMSMarker]
     @Binding var selectedMarker: GMSMarker?
+    
+    var chosenMarker: GMSMarker?
+    
     var onAnimationEnded: () -> ()
     var mapViewWillMove: (Bool) -> ()
     
@@ -59,6 +62,19 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
         
         func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
             self.mapViewControllerBridge.mapViewWillMove(gesture)
+        }
+        
+        // Add a marker on the map by tapping somewhere.
+        func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+            if mapViewControllerBridge.chosenMarker == nil {
+                mapViewControllerBridge.chosenMarker = GMSMarker(position: coordinate)
+                mapViewControllerBridge.chosenMarker!.map = mapView
+            } else {
+                let marker = mapViewControllerBridge.chosenMarker!
+                marker.position = coordinate
+            }
+            // Allows dragging to the marker.
+            mapViewControllerBridge.chosenMarker?.isDraggable = true
         }
     }
     
