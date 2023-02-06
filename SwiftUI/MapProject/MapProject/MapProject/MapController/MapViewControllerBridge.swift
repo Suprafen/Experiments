@@ -15,21 +15,26 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     
     var chosenMarker: GMSMarker?
     
+    var pointA: GMSMarker?
+    var pointB: GMSMarker?
+    
     var onAnimationEnded: () -> ()
     var mapViewWillMove: (Bool) -> ()
     
-  func makeUIViewController(context: Context) -> MapViewController {
-      let uiViewController = MapViewController()
-      uiViewController.map.delegate = context.coordinator
-      return uiViewController
-  }
-
-  func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
-      // Update the map for each marker
-      markers.forEach { $0.map = uiViewController.map }
-      selectedMarker?.map = uiViewController.map
-      animateToSelectedMarker(viewController: uiViewController)
-  }
+    var directionManager: DirectionManager = DirectionManager()
+    
+    func makeUIViewController(context: Context) -> MapViewController {
+        let uiViewController = MapViewController()
+        uiViewController.map.delegate = context.coordinator
+        return uiViewController
+    }
+    
+    func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
+        // Update the map for each marker
+        markers.forEach { $0.map = uiViewController.map }
+        selectedMarker?.map = uiViewController.map
+        animateToSelectedMarker(viewController: uiViewController)
+    }
     
     private func animateToSelectedMarker(viewController: MapViewController) {
         guard let selectedMarker else { return }
@@ -66,15 +71,38 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
         
         // Add a marker on the map by tapping somewhere.
         func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-            if mapViewControllerBridge.chosenMarker == nil {
-                mapViewControllerBridge.chosenMarker = GMSMarker(position: coordinate)
-                mapViewControllerBridge.chosenMarker!.map = mapView
+            if mapViewControllerBridge.pointA == nil {
+                let marker = GMSMarker(position: coordinate)
+                mapViewControllerBridge.pointA = marker
+                marker.map = mapView
+            } else if mapViewControllerBridge.pointB == nil {
+                let marker = GMSMarker(position: coordinate)
+                mapViewControllerBridge.pointB = marker
+                marker.icon = GMSMarker.markerImage(with: .systemBlue)
+                marker.map = mapView
+                
+                Task {
+                    let pbCoordinate = mapViewControllerBridge.pointB!.position
+                    let paCoordinate = mapViewControllerBridge.pointA!.position
+                    
+                    let origin = "\(paCoordinate.longitude),\(paCoordinate.latitude)"
+                    let destination = "\(pbCoordinate.longitude),\(pbCoordinate.latitude)"
+                    
+                    let url = mapViewControllerBridge.directionManager.buildURL(origin: origin, destination: destination)
+                    do {
+                        try await mapViewControllerBridge.directionManager.makeRequest(forURL: url)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                
             } else {
-                let marker = mapViewControllerBridge.chosenMarker!
-                marker.position = coordinate
+                mapViewControllerBridge.pointA?.map = nil
+                mapViewControllerBridge.pointB?.map = nil
+                
+                mapViewControllerBridge.pointA = nil
+                mapViewControllerBridge.pointB = nil
             }
-            // Allows dragging to the marker.
-            mapViewControllerBridge.chosenMarker?.isDraggable = true
         }
     }
     

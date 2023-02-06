@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2401A8C29915E6000C95658 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2401A8B29915E6000C95658 /* DirectionManager.swift */; };
 		E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */; };
 		E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BB1298968CB00EF6C89 /* ContentView.swift */; };
 		E2799BB4298968CC00EF6C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2799BB3298968CC00EF6C89 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		4C44EB135DA64471EB902285 /* Pods-MapProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapProject.debug.xcconfig"; path = "Target Support Files/Pods-MapProject/Pods-MapProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5B4C15725C549F026F924633 /* Pods-MapProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapProject.release.xcconfig"; path = "Target Support Files/Pods-MapProject/Pods-MapProject.release.xcconfig"; sourceTree = "<group>"; };
 		857E8D20FDF5A69F118780B5 /* Pods_MapProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2401A8B29915E6000C95658 /* DirectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
 		E2799BAC298968CB00EF6C89 /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProjectApp.swift; sourceTree = "<group>"; };
 		E2799BB1298968CB00EF6C89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				E294EFAE298AAC860009278B /* MapViewController.swift */,
 				E294EFB0298AAC960009278B /* MapViewControllerBridge.swift */,
+				E2401A8B29915E6000C95658 /* DirectionManager.swift */,
 			);
 			path = MapController;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 				E2799BA9298968CB00EF6C89 /* Frameworks */,
 				E2799BAA298968CB00EF6C89 /* Resources */,
 				200A8E754E999A59D16983D6 /* [CP] Copy Pods Resources */,
+				C3E680FEE47FC6966665FD70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +208,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapProject/Pods-MapProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C3E680FEE47FC6966665FD70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapProject/Pods-MapProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapProject/Pods-MapProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapProject/Pods-MapProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D2F5E56FEFE56358DEFA5A7A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +260,7 @@
 				E294EFAC298AAC0E0009278B /* City.swift in Sources */,
 				E294EFAF298AAC860009278B /* MapViewController.swift in Sources */,
 				E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */,
+				E2401A8C29915E6000C95658 /* DirectionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,11 +393,13 @@
 				DEVELOPMENT_TEAM = KWBL32UU3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Here!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,11 +425,13 @@
 				DEVELOPMENT_TEAM = KWBL32UU3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Here!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

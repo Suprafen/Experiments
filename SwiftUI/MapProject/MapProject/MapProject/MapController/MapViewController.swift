@@ -17,5 +17,7 @@ class MapViewController: UIViewController {
         super.loadView()  // Apple's docs say we should not call super!
         self.view = map
         
+        map.isBuildingsEnabled = false
+        
     }
 }
