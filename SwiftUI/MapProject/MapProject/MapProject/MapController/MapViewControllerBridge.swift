@@ -70,6 +70,7 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
         }
         
         // Add a marker on the map by tapping somewhere.
+        @MainActor
         func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
             if mapViewControllerBridge.pointA == nil {
                 let marker = GMSMarker(position: coordinate)
@@ -90,7 +91,13 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
                     
                     let url = mapViewControllerBridge.directionManager.buildURL(origin: origin, destination: destination)
                     do {
-                        try await mapViewControllerBridge.directionManager.makeRequest(forURL: url)
+                        let polylines = try await mapViewControllerBridge.directionManager.makeRequest(forURL: url)
+                        
+                        for polyline in polylines {
+                            polyline.strokeColor = .systemBlue
+                            polyline.map = mapView
+                        }
+                        
                     } catch {
                         print(error.localizedDescription)
                     }
