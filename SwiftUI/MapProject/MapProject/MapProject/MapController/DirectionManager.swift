@@ -52,3 +52,19 @@ class DirectionManager {
 enum DirectionError: String, Error {
     case getDirectionFailure = "Impossible to get direction"
 }
+
+
+class PrettyJson {
+    
+    private init() {
+    }
+    
+    static let shared = PrettyJson()
+    
+    func printPretty(data: Data) {
+        if let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
+           let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+            print(String(decoding: jsonData, as: UTF8.self))
+        }
+    }
+}

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @Binding var searchQuerry: String
+    @Binding var searchQuery: String
+    @EnvironmentObject var placeManager: PlaceManager
     
     var body: some View {
-        TextField("Start typing...", text: $searchQuerry)
+        TextField("Start typing...", text: $searchQuery)
+            .onSubmit {
+                Task {
+                    await placeManager.getPlaces(withQuery: searchQuery)
+                }
+            }
             .textFieldStyle(.roundedBorder)
     }
 }
-

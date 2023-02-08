@@ -30,7 +30,9 @@ struct ContentView: View {
     @State var expandList: Bool = false
     @State var selectedMarker: GMSMarker?
     @State var yDragTranslation: CGFloat = 0
-    @State var searchQuerry: String = ""
+    @State var searchQuery: String = ""
+    
+    @StateObject var placeManager: PlaceManager = PlaceManager()
     
     var body: some View {
         
@@ -62,10 +64,12 @@ struct ContentView: View {
                 .ignoresSafeArea()
                 // MARK: - SearchBar
                 VStack(spacing: 0) {
-                    SearchBar(searchQuerry: $searchQuerry)
-                    if !searchQuerry.isEmpty {
-                        SuggestionsList()
+                    SearchBar(searchQuery: $searchQuery)
+                        .environmentObject(placeManager)
+                    if !placeManager.places.isEmpty {
+                        ResultsList()
                             .frame(maxHeight: 100)
+                            .environmentObject(placeManager)
                     }
                 }
                 .padding(20)
