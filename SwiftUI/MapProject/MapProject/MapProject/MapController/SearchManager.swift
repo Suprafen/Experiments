@@ -44,6 +44,16 @@ class SearchManager {
                     place.address = address
                 }
                 
+                if let rating = result["rating"].double {
+                    place.rating = rating
+                }
+                
+                if let openingHours = result["opening_hours"].dictionary {
+                    if let openNow = openingHours["open_now"]?.bool {
+                        place.open = openNow
+                    }
+                }
+                
                 if let geometry = result["geometry"].dictionary {
                     if let location = geometry["location"]?.dictionary,
                        let lat = location["lat"]?.double, let lng = location["lng"]?.double {

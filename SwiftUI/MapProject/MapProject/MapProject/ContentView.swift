@@ -68,7 +68,7 @@ struct ContentView: View {
                         .environmentObject(placeManager)
                     if !placeManager.places.isEmpty {
                         ResultsList()
-                            .frame(maxHeight: 100)
+                            .frame(maxHeight: .infinity)
                             .environmentObject(placeManager)
                     }
                 }

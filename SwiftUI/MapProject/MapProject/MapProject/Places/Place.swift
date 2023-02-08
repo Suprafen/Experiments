@@ -14,6 +14,22 @@ class Place: Identifiable {
     var address: String = ""
     var lat: Double = 0.0
     var lng: Double = 0.0
+    var open: Bool = true
+    var rating: Double = 0.0
+    
+    init() {
+        
+    }
+    
+    init(id: UUID = UUID(), name: String, address: String, lat: Double, lng: Double, open: Bool, rating: Double) {
+        self.id = id
+        self.name = name
+        self.address = address
+        self.lat = lat
+        self.lng = lng
+        self.open = open
+        self.rating = rating
+    }
 }
 
 extension Place: Hashable {
