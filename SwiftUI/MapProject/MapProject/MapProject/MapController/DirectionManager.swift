@@ -10,8 +10,8 @@ import GoogleMaps
 import SwiftyJSON
 
 class DirectionManager {
-    @MainActor
-    func makeRequest(forURL url: URL) async throws -> [GMSPolyline] {
+    
+    func buildDirection(forURL url: URL, withMap map: GMSMapView) async throws {
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let response = response as? HTTPURLResponse,
@@ -22,24 +22,30 @@ class DirectionManager {
             print(String(decoding: jsonData, as: UTF8.self))
         }
         
-        let returnedData = JSON(data)
-        let routes = returnedData["routes"].arrayValue
-        var polylines = [GMSPolyline]()
-        
-        for route in routes {
-            guard let overviewPolyline = route["overview_polyline"].dictionary,
-                  let points = overviewPolyline["points"]?.string else { continue }
+        DispatchQueue.main.async {
+            let returnedData = JSON(data)
+            let routes = returnedData["routes"].arrayValue
+            var polylines = [GMSPolyline]()
             
-            let path = GMSPath(fromEncodedPath: points)
-            let polyline = GMSPolyline(path: path)
-            polylines.append(polyline)
+            for route in routes {
+                guard let overviewPolyline = route["overview_polyline"].dictionary,
+                      let points = overviewPolyline["points"]?.string else { continue }
+                
+                let path = GMSPath(fromEncodedPath: points)
+                let polyline = GMSPolyline(path: path)
+                polylines.append(polyline)
+            }
+            
+            for polyline in polylines {
+                polyline.strokeColor = .systemBlue
+                polyline.strokeWidth = 4
+                polyline.map = map
+            }
         }
-        
-        return polylines
     }
     
     func buildURL(origin: String, destination: String) -> URL {
-        return URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\("13.3648,52.5134")&destination=\("14.4326,50.0657")&key=")!
+        URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&key=YOUR_API_KEY")!
     }
 }
 

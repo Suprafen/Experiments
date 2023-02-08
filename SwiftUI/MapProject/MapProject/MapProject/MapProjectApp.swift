@@ -12,7 +12,7 @@ import GoogleMaps
 struct MapProjectApp: App {
     
     init() {
-        GMSServices.provideAPIKey("")
+        GMSServices.provideAPIKey("YOUR_API_KEY")
     }
     
     var body: some Scene {
