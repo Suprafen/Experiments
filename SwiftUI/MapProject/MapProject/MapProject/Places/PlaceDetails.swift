@@ -22,6 +22,12 @@ class PlaceDetails {
     var type: POIType = .undefined
     var openHoursWeekDayText: [String] = []
     
+    init(){}
+    init(type: POIType, openHoursWeekDayText: [String]) {
+        self.type = type
+        self.openHoursWeekDayText = openHoursWeekDayText
+    }
+    
     static func decodePlaceDetails(fromData data: Any) -> PlaceDetails {
         let pdData = JSON(data)
         

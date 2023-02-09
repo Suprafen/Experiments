@@ -24,6 +24,7 @@
 		E294EFB1298AAC960009278B /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294EFB0298AAC960009278B /* MapViewControllerBridge.swift */; };
 		E2E8EBEB29950E55002476E1 /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBEA29950E54002476E1 /* PlaceDetails.swift */; };
 		E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBED29952469002476E1 /* APIKEys.swift */; };
+		E2E8EBF0299526F1002476E1 /* PlaceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBEF299526F1002476E1 /* PlaceDetailsView.swift */; };
 		FC970DCCA3CC823215910E3B /* Pods_MapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857E8D20FDF5A69F118780B5 /* Pods_MapProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		E294EFB0298AAC960009278B /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
 		E2E8EBEA29950E54002476E1 /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
 		E2E8EBED29952469002476E1 /* APIKEys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEys.swift; sourceTree = "<group>"; };
+		E2E8EBEF299526F1002476E1 /* PlaceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E23CC8452993FF9C0093D4C9 /* PlaceRow.swift */,
+				E2E8EBEF299526F1002476E1 /* PlaceDetailsView.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -129,10 +132,10 @@
 		E2799BAE298968CB00EF6C89 /* MapProject */ = {
 			isa = PBXGroup;
 			children = (
+				E2E8EBEC2995244D002476E1 /* App */,
 				E23CC83F2993F8E80093D4C9 /* Places */,
 				E294EFAD298AAC790009278B /* MapController */,
 				E294EFAA298AAC020009278B /* City */,
-				E2E8EBEC2995244D002476E1 /* App */,
 				E2799BB1298968CB00EF6C89 /* ContentView.swift */,
 				E23CC8382993E2E40093D4C9 /* ReusableViews */,
 				E2799BB3298968CC00EF6C89 /* Assets.xcassets */,
@@ -317,6 +320,7 @@
 				E294EFAC298AAC0E0009278B /* City.swift in Sources */,
 				E23CC8432993FDF70093D4C9 /* PlacesManager.swift in Sources */,
 				E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */,
+				E2E8EBF0299526F1002476E1 /* PlaceDetailsView.swift in Sources */,
 				E294EFAF298AAC860009278B /* MapViewController.swift in Sources */,
 				E23CC83A2993E2FE0093D4C9 /* SearchBar.swift in Sources */,
 				E23CC83E2993F0940093D4C9 /* SearchManager.swift in Sources */,
