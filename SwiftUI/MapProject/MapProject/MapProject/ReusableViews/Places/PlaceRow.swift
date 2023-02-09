@@ -31,6 +31,6 @@ struct PlaceRow: View {
 
 struct PlaceRow_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceRow(place: Place(name: "Lidl", address: "Grochowska", lat: 0.0, lng: 0.0, open: true, rating: 4.1))
+        PlaceRow(place: Place(name: "Lidl", address: "Grochowska", lat: 0.0, lng: 0.0, open: true, rating: 4.1, placeID: "ChIJJRezR4vNHkcREp8n8Tj82NY"))
     }
 }

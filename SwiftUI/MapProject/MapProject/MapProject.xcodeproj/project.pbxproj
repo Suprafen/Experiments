@@ -22,6 +22,7 @@
 		E294EFAC298AAC0E0009278B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294EFAB298AAC0E0009278B /* City.swift */; };
 		E294EFAF298AAC860009278B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294EFAE298AAC860009278B /* MapViewController.swift */; };
 		E294EFB1298AAC960009278B /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294EFB0298AAC960009278B /* MapViewControllerBridge.swift */; };
+		E2E8EBEB29950E55002476E1 /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBEA29950E54002476E1 /* PlaceDetails.swift */; };
 		FC970DCCA3CC823215910E3B /* Pods_MapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857E8D20FDF5A69F118780B5 /* Pods_MapProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		E294EFAB298AAC0E0009278B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		E294EFAE298AAC860009278B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E294EFB0298AAC960009278B /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		E2E8EBEA29950E54002476E1 /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				E23CC8402993F8F50093D4C9 /* Place.swift */,
+				E2E8EBEA29950E54002476E1 /* PlaceDetails.swift */,
 				E23CC8422993FDF70093D4C9 /* PlacesManager.swift */,
 			);
 			path = Places;
@@ -306,6 +309,7 @@
 				E23CC83A2993E2FE0093D4C9 /* SearchBar.swift in Sources */,
 				E23CC83E2993F0940093D4C9 /* SearchManager.swift in Sources */,
 				E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */,
+				E2E8EBEB29950E55002476E1 /* PlaceDetails.swift in Sources */,
 				E23CC8412993F8F50093D4C9 /* Place.swift in Sources */,
 				E23CC8462993FF9C0093D4C9 /* PlaceRow.swift in Sources */,
 				E2401A8C29915E6000C95658 /* DirectionManager.swift in Sources */,

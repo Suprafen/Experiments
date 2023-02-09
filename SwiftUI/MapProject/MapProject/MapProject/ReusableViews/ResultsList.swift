@@ -16,6 +16,12 @@ struct ResultsList: View {
                 PlaceRow(place: place)
                     .onTapGesture {
                         print(place)
+                        if place.placeDetails == nil {
+                            Task {
+                                place.placeDetails = await placeManager.getPlaceDetails(placeID: place.placeID, placeName: place.name)
+                                print(place)
+                            }
+                        }
                     }
             }
         }.listStyle(.plain)

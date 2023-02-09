@@ -10,12 +10,21 @@ import SwiftyJSON
 
 class SearchManager {
     
-    func buildURL(withQuery query: String, radius: Int = 10_000) -> URL{
-        return URL(string:"https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(query)&radius=\(radius)&key=YOUR_API_KEY")!
+    func buildURL(withQuery query: String, radius: Int = 10_000) -> URL {
+        let convertedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
+        print(convertedQuery)
+        return URL(string:"https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(convertedQuery)&radius=\(radius)&key=")!
+    }
+    
+    func buildURL(withPlaceID placeID: String) -> URL {
+        let YOUR_API_KEY = ""
+        
+        return URL(string: "https://maps.googleapis.com/maps/api/place/details/json?fields=name%2Crating%2Ccurrent_opening_hours%2Ctype&place_id=\(placeID)&key=\(YOUR_API_KEY)")!
     }
     
     func getPlaces(fromURL url: URL) async -> [Place] {
         do {
+            
             let (data, response) = try await URLSession.shared.data(from: url)
             
             guard let httpResponse = response as? HTTPURLResponse else { return [] }
@@ -23,51 +32,28 @@ class SearchManager {
                 print("Something went wrong in \(#function) - \(httpResponse.statusCode) sttus code")
                 return []
             }
-            
 //            PrettyJson.shared.printPretty(data: data)
+            return Place.decodeAllPlaces(forData: data)
             
-            let json = JSON(data)
+        } catch {
+            fatalError("Something went wrong in \(#function) -- \(error.localizedDescription)")
+        }
+    }
+    
+    func getPlaceDetails(fromURL url: URL) async -> PlaceDetails? {
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
             
-            guard let results = json["results"].array else { return [] }
-            
-            var places = [Place]()
-            
-            for result in results {
-                
-                let place = Place()
-                
-                if let placeName = result["name"].string {
-                    place.name = placeName
-                }
-                
-                if let address = result["formatted_address"].string {
-                    place.address = address
-                }
-                
-                if let rating = result["rating"].double {
-                    place.rating = rating
-                }
-                
-                if let openingHours = result["opening_hours"].dictionary {
-                    if let openNow = openingHours["open_now"]?.bool {
-                        place.open = openNow
-                    }
-                }
-                
-                if let geometry = result["geometry"].dictionary {
-                    if let location = geometry["location"]?.dictionary,
-                       let lat = location["lat"]?.double, let lng = location["lng"]?.double {
-                        
-                        place.lat = lat
-                        place.lng = lng
-                    }
-                }
-                places.append(place)
+            guard let httpResponse = response as? HTTPURLResponse else { return nil }
+            guard httpResponse.statusCode == 200 else {
+                print("Something went wrong in \(#function) - \(httpResponse.statusCode) sttus code")
+                return nil
             }
             
-            print(places)
-            
-            return places
+            let results = JSON(data)
+            let placeDetails = results["result"].rawValue
+//            PrettyJson.shared.printPretty(data: data)
+            return PlaceDetails.decodePlaceDetails(fromData: placeDetails)
             
         } catch {
             fatalError("Something went wrong in \(#function) -- \(error.localizedDescription)")

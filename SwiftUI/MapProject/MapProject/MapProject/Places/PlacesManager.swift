@@ -23,7 +23,15 @@ class PlaceManager: ObservableObject {
         let placesS = await task.value
         
         DispatchQueue.main.async {
-            self.places = placesS
+            withAnimation {
+                self.places = placesS
+            }
         }
+    }
+    
+    func getPlaceDetails(placeID: String, placeName: String) async -> PlaceDetails? {
+        let url = searchManager.buildURL(withPlaceID: placeID)
+        
+        return await searchManager.getPlaceDetails(fromURL: url)
     }
 }
