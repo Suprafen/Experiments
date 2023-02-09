@@ -45,7 +45,7 @@ class DirectionManager {
     }
     
     func buildURL(origin: String, destination: String) -> URL {
-        URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&key=YOUR_API_KEY")!
+        URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&key=\(DIRECTIONS_API_KEY)")!
     }
 }
 

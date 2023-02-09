@@ -12,14 +12,12 @@ class SearchManager {
     
     func buildURL(withQuery query: String, radius: Int = 10_000) -> URL {
         let convertedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
-        print(convertedQuery)
-        return URL(string:"https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(convertedQuery)&radius=\(radius)&key=")!
+        
+        return URL(string:"https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(convertedQuery)&radius=\(radius)&key=\(PLACES_API_KEY)")!
     }
     
     func buildURL(withPlaceID placeID: String) -> URL {
-        let YOUR_API_KEY = ""
-        
-        return URL(string: "https://maps.googleapis.com/maps/api/place/details/json?fields=name%2Crating%2Ccurrent_opening_hours%2Ctype&place_id=\(placeID)&key=\(YOUR_API_KEY)")!
+        return URL(string: "https://maps.googleapis.com/maps/api/place/details/json?fields=name%2Crating%2Ccurrent_opening_hours%2Ctype&place_id=\(placeID)&key=\(PLACES_API_KEY)")!
     }
     
     func getPlaces(fromURL url: URL) async -> [Place] {
