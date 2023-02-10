@@ -40,7 +40,7 @@ extension Step {
             newStep.endLocation = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         }
         
-        if let startLocation = step["poliline"].dictionary,
+        if let startLocation = step["polyline"].dictionary,
            let polylinePoints = startLocation["points"]?.string {
             newStep.polylinePoints = polylinePoints
         }

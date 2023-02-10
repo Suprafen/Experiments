@@ -22,18 +22,36 @@ class DirectionManager {
             
             let direction = Direction.create(fromData: returnedData)
             
-            var polylines = [GMSPolyline]()
+            // MARK: - Used to draw direct direction with high details:
+//            let routes = direction.routes
+//
+//            guard !routes.isEmpty else { return }
+//
+//            let route = routes.first!
+//
+//            let legs = route.legs
+//
+//            guard !legs.isEmpty else { return }
+//
+//            let leg = legs.first!
+//
+//            guard !leg.steps.isEmpty else { return }
+//
+//            for step in leg.steps {
+//                print(step.polylinePoints)
+//                let path = GMSPath(fromEncodedPath: step.polylinePoints)
+//                let polyline = GMSPolyline(path: path)
+//                polyline.strokeWidth = 8
+//                polyline.strokeColor = .systemBlue.withAlphaComponent(0.8)
+//                polyline.geodesic = true
+//                polyline.map = map
+//
+//            }
             
-            // This is an algorithm that's used for building aproximate direction
-            // and this is the reason why it's so bad looking
-            // if you put two points between distant places.
+            // MARK: - Used to draw aproximate direction:
             for route in direction.routes {
                 let path = GMSPath(fromEncodedPath: route.overviewPolylinePoints)
                 let polyline = GMSPolyline(path: path)
-                polylines.append(polyline)
-            }
-            
-            for polyline in polylines {
                 polyline.strokeColor = .systemBlue
                 polyline.strokeWidth = 4
                 polyline.geodesic = true
