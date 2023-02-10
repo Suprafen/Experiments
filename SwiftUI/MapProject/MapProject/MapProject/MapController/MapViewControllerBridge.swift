@@ -12,6 +12,7 @@ import SwiftUI
 struct MapViewControllerBridge: UIViewControllerRepresentable {
     @Binding var markers: [GMSMarker]
     @Binding var selectedMarker: GMSMarker?
+    @Binding var isOverlayPresented: Bool
     
     var chosenMarker: GMSMarker?
     
@@ -22,6 +23,7 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     var mapViewWillMove: (Bool) -> ()
     
     var directionManager: DirectionManager = DirectionManager()
+    var overlayManager: OverlayManager = OverlayManager()
     
     func makeUIViewController(context: Context) -> MapViewController {
         let uiViewController = MapViewController()
@@ -34,6 +36,12 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
         markers.forEach { $0.map = uiViewController.map }
         selectedMarker?.map = uiViewController.map
         animateToSelectedMarker(viewController: uiViewController)
+        
+        if isOverlayPresented {
+            overlayManager.putImage(onMap: uiViewController.map)
+        } else {
+            uiViewController.map.clear()
+        }
     }
     
     private func animateToSelectedMarker(viewController: MapViewController) {

@@ -31,6 +31,7 @@ struct ContentView: View {
     @State var selectedMarker: GMSMarker?
     @State var yDragTranslation: CGFloat = 0
     @State var searchQuery: String = ""
+    @State var isOverlayPresented: Bool = false
     
     @StateObject var placeManager: PlaceManager = PlaceManager()
     
@@ -42,7 +43,7 @@ struct ContentView: View {
             ZStack(alignment: .top) {
                 // Map
                 let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
-                MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, onAnimationEnded: {
+                MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, isOverlayPresented: $isOverlayPresented, onAnimationEnded: {
                     self.zoomInCenter = true
                 }, mapViewWillMove: { isGesture in
                     guard isGesture else { return }
@@ -73,6 +74,16 @@ struct ContentView: View {
                     }
                 }
                 .padding(20)
+                
+                GeometryReader { geometry in
+                    HStack {
+                        Spacer()
+                        AddOverlayButtonView(isOverlayPresented: $isOverlayPresented)
+                            .frame(width: 50, height: 50)
+                    }
+                    .offset(x: 0,
+                            y: geometry.size.height * 0.75)
+                }.padding(20)
                 
                 // MARK: - Cities List
                 CitiesList(markers: $markers) { (marker) in
@@ -137,7 +148,9 @@ struct CitiesList: View {
                             Text(marker.title ?? "")
                         }
                     }
-                }.frame(maxWidth: .infinity)
+                }
+                .listStyle(.plain)
+                .frame(maxWidth: .infinity)
             }
         }
     }
@@ -148,11 +161,12 @@ struct MapContainerView: View {
     @Binding var zoomInCenter: Bool
     @Binding var markers: [GMSMarker]
     @Binding var selectedMarker: GMSMarker?
+    @Binding var isOverlayPresented: Bool
     
     var body: some View {
         GeometryReader { geometry in
             let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
-            MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, onAnimationEnded: {
+            MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, isOverlayPresented: $isOverlayPresented, onAnimationEnded: {
                 self.zoomInCenter = true
             }, mapViewWillMove: { isGesture in
                 guard isGesture else { return }

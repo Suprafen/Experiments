@@ -33,6 +33,8 @@
 		E2E8EC00299676CC002476E1 /* Route+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBFF299676CC002476E1 /* Route+Decoding.swift */; };
 		E2E8EC02299676D8002476E1 /* Leg+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EC01299676D7002476E1 /* Leg+Decoding.swift */; };
 		E2E8EC04299676E2002476E1 /* Step+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EC03299676E2002476E1 /* Step+Decoding.swift */; };
+		E2E8EC0A2996923D002476E1 /* OverlayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EC092996923D002476E1 /* OverlayManager.swift */; };
+		E2E8EC0E29969464002476E1 /* AddOverlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EC0D29969464002476E1 /* AddOverlayButtonView.swift */; };
 		FC970DCCA3CC823215910E3B /* Pods_MapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857E8D20FDF5A69F118780B5 /* Pods_MapProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		E2E8EBFF299676CC002476E1 /* Route+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Decoding.swift"; sourceTree = "<group>"; };
 		E2E8EC01299676D7002476E1 /* Leg+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Leg+Decoding.swift"; sourceTree = "<group>"; };
 		E2E8EC03299676E2002476E1 /* Step+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Step+Decoding.swift"; sourceTree = "<group>"; };
+		E2E8EC092996923D002476E1 /* OverlayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayManager.swift; sourceTree = "<group>"; };
+		E2E8EC0D29969464002476E1 /* AddOverlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOverlayButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		E23CC8382993E2E40093D4C9 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				E2E8EC0C29969428002476E1 /* HelperViews */,
 				E23CC8442993FF8D0093D4C9 /* Places */,
 				E23CC8392993E2FE0093D4C9 /* SearchBar.swift */,
 				E23CC83B2993ED5A0093D4C9 /* ResultsList.swift */,
@@ -185,6 +190,7 @@
 				E294EFB0298AAC960009278B /* MapViewControllerBridge.swift */,
 				E2401A8B29915E6000C95658 /* DirectionManager.swift */,
 				E23CC83D2993F0940093D4C9 /* SearchManager.swift */,
+				E2E8EC092996923D002476E1 /* OverlayManager.swift */,
 			);
 			path = MapController;
 			sourceTree = "<group>";
@@ -243,6 +249,14 @@
 				E2E8EC03299676E2002476E1 /* Step+Decoding.swift */,
 			);
 			path = Step;
+			sourceTree = "<group>";
+		};
+		E2E8EC0C29969428002476E1 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8EC0D29969464002476E1 /* AddOverlayButtonView.swift */,
+			);
+			path = HelperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +398,7 @@
 				E23CC83C2993ED5A0093D4C9 /* ResultsList.swift in Sources */,
 				E2E8EBFC29966C5F002476E1 /* Direction.swift in Sources */,
 				E294EFA92989738E0009278B /* MapView.swift in Sources */,
+				E2E8EC0A2996923D002476E1 /* OverlayManager.swift in Sources */,
 				E294EFAC298AAC0E0009278B /* City.swift in Sources */,
 				E23CC8432993FDF70093D4C9 /* PlacesManager.swift in Sources */,
 				E2E8EC00299676CC002476E1 /* Route+Decoding.swift in Sources */,
@@ -393,6 +408,7 @@
 				E2E8EBF629966A37002476E1 /* Route.swift in Sources */,
 				E23CC83A2993E2FE0093D4C9 /* SearchBar.swift in Sources */,
 				E2E8EBF829966A52002476E1 /* Step.swift in Sources */,
+				E2E8EC0E29969464002476E1 /* AddOverlayButtonView.swift in Sources */,
 				E2E8EC02299676D8002476E1 /* Leg+Decoding.swift in Sources */,
 				E2E8EBFA29966B5F002476E1 /* Leg.swift in Sources */,
 				E23CC83E2993F0940093D4C9 /* SearchManager.swift in Sources */,
