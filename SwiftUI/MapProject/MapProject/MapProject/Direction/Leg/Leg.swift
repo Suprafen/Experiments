@@ -11,6 +11,7 @@ import CoreLocation
 class Leg {
     var startLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var endLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    /** Distance specified in km */
     var distance: Int = 0
     var startAddress: String = ""
     var endAddress: String = ""

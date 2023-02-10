@@ -29,6 +29,10 @@
 		E2E8EBF829966A52002476E1 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBF729966A52002476E1 /* Step.swift */; };
 		E2E8EBFA29966B5F002476E1 /* Leg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBF929966B5F002476E1 /* Leg.swift */; };
 		E2E8EBFC29966C5F002476E1 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBFB29966C5F002476E1 /* Direction.swift */; };
+		E2E8EBFE299676C2002476E1 /* Direction+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBFD299676C2002476E1 /* Direction+Decoding.swift */; };
+		E2E8EC00299676CC002476E1 /* Route+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBFF299676CC002476E1 /* Route+Decoding.swift */; };
+		E2E8EC02299676D8002476E1 /* Leg+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EC01299676D7002476E1 /* Leg+Decoding.swift */; };
+		E2E8EC04299676E2002476E1 /* Step+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EC03299676E2002476E1 /* Step+Decoding.swift */; };
 		FC970DCCA3CC823215910E3B /* Pods_MapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857E8D20FDF5A69F118780B5 /* Pods_MapProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		E2E8EBF729966A52002476E1 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		E2E8EBF929966B5F002476E1 /* Leg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leg.swift; sourceTree = "<group>"; };
 		E2E8EBFB29966C5F002476E1 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		E2E8EBFD299676C2002476E1 /* Direction+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Direction+Decoding.swift"; sourceTree = "<group>"; };
+		E2E8EBFF299676CC002476E1 /* Route+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Decoding.swift"; sourceTree = "<group>"; };
+		E2E8EC01299676D7002476E1 /* Leg+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Leg+Decoding.swift"; sourceTree = "<group>"; };
+		E2E8EC03299676E2002476E1 /* Step+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Step+Decoding.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,12 +201,48 @@
 		E2E8EBF429966A1B002476E1 /* Direction */ = {
 			isa = PBXGroup;
 			children = (
-				E2E8EBFB29966C5F002476E1 /* Direction.swift */,
-				E2E8EBF529966A37002476E1 /* Route.swift */,
-				E2E8EBF929966B5F002476E1 /* Leg.swift */,
-				E2E8EBF729966A52002476E1 /* Step.swift */,
+				E2E8EC05299676EE002476E1 /* Direction */,
+				E2E8EC0629967703002476E1 /* Route */,
+				E2E8EC072996770B002476E1 /* Leg */,
+				E2E8EC0829967712002476E1 /* Step */,
 			);
 			path = Direction;
+			sourceTree = "<group>";
+		};
+		E2E8EC05299676EE002476E1 /* Direction */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8EBFB29966C5F002476E1 /* Direction.swift */,
+				E2E8EBFD299676C2002476E1 /* Direction+Decoding.swift */,
+			);
+			path = Direction;
+			sourceTree = "<group>";
+		};
+		E2E8EC0629967703002476E1 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8EBF529966A37002476E1 /* Route.swift */,
+				E2E8EBFF299676CC002476E1 /* Route+Decoding.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		E2E8EC072996770B002476E1 /* Leg */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8EBF929966B5F002476E1 /* Leg.swift */,
+				E2E8EC01299676D7002476E1 /* Leg+Decoding.swift */,
+			);
+			path = Leg;
+			sourceTree = "<group>";
+		};
+		E2E8EC0829967712002476E1 /* Step */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8EBF729966A52002476E1 /* Step.swift */,
+				E2E8EC03299676E2002476E1 /* Step+Decoding.swift */,
+			);
+			path = Step;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,19 +377,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E8EBFE299676C2002476E1 /* Direction+Decoding.swift in Sources */,
 				E294EFB1298AAC960009278B /* MapViewControllerBridge.swift in Sources */,
+				E2E8EC04299676E2002476E1 /* Step+Decoding.swift in Sources */,
 				E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */,
 				E23CC83C2993ED5A0093D4C9 /* ResultsList.swift in Sources */,
 				E2E8EBFC29966C5F002476E1 /* Direction.swift in Sources */,
 				E294EFA92989738E0009278B /* MapView.swift in Sources */,
 				E294EFAC298AAC0E0009278B /* City.swift in Sources */,
 				E23CC8432993FDF70093D4C9 /* PlacesManager.swift in Sources */,
+				E2E8EC00299676CC002476E1 /* Route+Decoding.swift in Sources */,
 				E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */,
 				E2E8EBF0299526F1002476E1 /* PlaceDetailsView.swift in Sources */,
 				E294EFAF298AAC860009278B /* MapViewController.swift in Sources */,
 				E2E8EBF629966A37002476E1 /* Route.swift in Sources */,
 				E23CC83A2993E2FE0093D4C9 /* SearchBar.swift in Sources */,
 				E2E8EBF829966A52002476E1 /* Step.swift in Sources */,
+				E2E8EC02299676D8002476E1 /* Leg+Decoding.swift in Sources */,
 				E2E8EBFA29966B5F002476E1 /* Leg.swift in Sources */,
 				E23CC83E2993F0940093D4C9 /* SearchManager.swift in Sources */,
 				E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */,

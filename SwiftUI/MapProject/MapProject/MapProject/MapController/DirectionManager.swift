@@ -17,23 +17,18 @@ class DirectionManager {
         guard let response = response as? HTTPURLResponse,
               response.statusCode == 200 else { throw DirectionError.getDirectionFailure }
         
-        if let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
-           let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
-            print(String(decoding: jsonData, as: UTF8.self))
-        }
-        
         DispatchQueue.main.async {
             let returnedData = JSON(data)
-            let routes = returnedData["routes"].arrayValue
+            
+            let direction = Direction.create(fromData: returnedData)
+            
             var polylines = [GMSPolyline]()
+            
             // This is an algorithm that's used for building aproximate direction
             // and this is the reason why it's so bad looking
             // if you put two points between distant places.
-            for route in routes {
-                guard let overviewPolyline = route["overview_polyline"].dictionary,
-                      let points = overviewPolyline["points"]?.string else { continue }
-                
-                let path = GMSPath(fromEncodedPath: points)
+            for route in direction.routes {
+                let path = GMSPath(fromEncodedPath: route.overviewPolylinePoints)
                 let polyline = GMSPolyline(path: path)
                 polylines.append(polyline)
             }
