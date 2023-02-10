@@ -25,6 +25,10 @@
 		E2E8EBEB29950E55002476E1 /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBEA29950E54002476E1 /* PlaceDetails.swift */; };
 		E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBED29952469002476E1 /* APIKEys.swift */; };
 		E2E8EBF0299526F1002476E1 /* PlaceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBEF299526F1002476E1 /* PlaceDetailsView.swift */; };
+		E2E8EBF629966A37002476E1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBF529966A37002476E1 /* Route.swift */; };
+		E2E8EBF829966A52002476E1 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBF729966A52002476E1 /* Step.swift */; };
+		E2E8EBFA29966B5F002476E1 /* Leg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBF929966B5F002476E1 /* Leg.swift */; };
+		E2E8EBFC29966C5F002476E1 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8EBFB29966C5F002476E1 /* Direction.swift */; };
 		FC970DCCA3CC823215910E3B /* Pods_MapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857E8D20FDF5A69F118780B5 /* Pods_MapProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,10 @@
 		E2E8EBEA29950E54002476E1 /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
 		E2E8EBED29952469002476E1 /* APIKEys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEys.swift; sourceTree = "<group>"; };
 		E2E8EBEF299526F1002476E1 /* PlaceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsView.swift; sourceTree = "<group>"; };
+		E2E8EBF529966A37002476E1 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		E2E8EBF729966A52002476E1 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		E2E8EBF929966B5F002476E1 /* Leg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leg.swift; sourceTree = "<group>"; };
+		E2E8EBFB29966C5F002476E1 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				E2E8EBEC2995244D002476E1 /* App */,
+				E2E8EBF429966A1B002476E1 /* Direction */,
 				E23CC83F2993F8E80093D4C9 /* Places */,
 				E294EFAD298AAC790009278B /* MapController */,
 				E294EFAA298AAC020009278B /* City */,
@@ -179,6 +188,17 @@
 				E2E8EBED29952469002476E1 /* APIKEys.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E2E8EBF429966A1B002476E1 /* Direction */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8EBFB29966C5F002476E1 /* Direction.swift */,
+				E2E8EBF529966A37002476E1 /* Route.swift */,
+				E2E8EBF929966B5F002476E1 /* Leg.swift */,
+				E2E8EBF729966A52002476E1 /* Step.swift */,
+			);
+			path = Direction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,13 +336,17 @@
 				E294EFB1298AAC960009278B /* MapViewControllerBridge.swift in Sources */,
 				E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */,
 				E23CC83C2993ED5A0093D4C9 /* ResultsList.swift in Sources */,
+				E2E8EBFC29966C5F002476E1 /* Direction.swift in Sources */,
 				E294EFA92989738E0009278B /* MapView.swift in Sources */,
 				E294EFAC298AAC0E0009278B /* City.swift in Sources */,
 				E23CC8432993FDF70093D4C9 /* PlacesManager.swift in Sources */,
 				E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */,
 				E2E8EBF0299526F1002476E1 /* PlaceDetailsView.swift in Sources */,
 				E294EFAF298AAC860009278B /* MapViewController.swift in Sources */,
+				E2E8EBF629966A37002476E1 /* Route.swift in Sources */,
 				E23CC83A2993E2FE0093D4C9 /* SearchBar.swift in Sources */,
+				E2E8EBF829966A52002476E1 /* Step.swift in Sources */,
+				E2E8EBFA29966B5F002476E1 /* Leg.swift in Sources */,
 				E23CC83E2993F0940093D4C9 /* SearchManager.swift in Sources */,
 				E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */,
 				E2E8EBEB29950E55002476E1 /* PlaceDetails.swift in Sources */,

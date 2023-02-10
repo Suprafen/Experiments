@@ -26,7 +26,9 @@ class DirectionManager {
             let returnedData = JSON(data)
             let routes = returnedData["routes"].arrayValue
             var polylines = [GMSPolyline]()
-            
+            // This is an algorithm that's used for building aproximate direction
+            // and this is the reason why it's so bad looking
+            // if you put two points between distant places.
             for route in routes {
                 guard let overviewPolyline = route["overview_polyline"].dictionary,
                       let points = overviewPolyline["points"]?.string else { continue }
@@ -39,6 +41,7 @@ class DirectionManager {
             for polyline in polylines {
                 polyline.strokeColor = .systemBlue
                 polyline.strokeWidth = 4
+                polyline.geodesic = true
                 polyline.map = map
             }
         }
