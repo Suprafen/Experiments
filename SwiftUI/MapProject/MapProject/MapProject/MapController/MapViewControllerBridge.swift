@@ -15,9 +15,13 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     @Binding var isOverlayPresented: Bool
     
     var chosenMarker: GMSMarker?
-    
+    // Used for direction construction
     var pointA: GMSMarker?
     var pointB: GMSMarker?
+    
+    var chosenPOIMarker: GMSMarker = GMSMarker()
+    
+    var overlay: GMSGroundOverlay = GMSGroundOverlay()
     
     var onAnimationEnded: () -> ()
     var mapViewWillMove: (Bool) -> ()
@@ -40,7 +44,8 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
         if isOverlayPresented {
             overlayManager.putImage(onMap: uiViewController.map)
         } else {
-            uiViewController.map.clear()
+            // Cause undefined behavior
+            // uiViewController.map.clear()
         }
     }
     
@@ -79,6 +84,14 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
         
         // Add a marker on the map by tapping somewhere.
         func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+            
+            print("Zoom level: \(mapView.camera.zoom)")
+            
+//            if mapView.selectedMarker == mapViewControllerBridge.chosenPOIMarker {
+//                mapViewControllerBridge.chosenPOIMarker.map = nil
+//                mapView.selectedMarker = nil
+//            }
+            
             if mapViewControllerBridge.pointA == nil {
                 let marker = GMSMarker(position: coordinate)
                 mapViewControllerBridge.pointA = marker
@@ -113,6 +126,24 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
                 mapViewControllerBridge.pointA = nil
                 mapViewControllerBridge.pointB = nil
             }
+        }
+        
+        func mapView(_ mapView: GMSMapView, didTapPOIWithPlaceID placeID: String, name: String, location: CLLocationCoordinate2D) {
+            // TODO: ABOUT POI FETCHING BY TAPPING ON POI ICON ON THE MAP
+            /* Ideally you should start fetching here for placeID
+                after fetching depends on the result return either error or value
+                everything should be done through @Binding property and corresponding View Model
+             */
+            let bridge = mapViewControllerBridge
+            bridge.chosenPOIMarker.position = location
+            bridge.chosenPOIMarker.title = name
+//            bridge.chosenPOIMarker.opacity = 0
+            bridge.chosenPOIMarker.infoWindowAnchor.y = 1
+            bridge.chosenPOIMarker.map = mapView
+            mapView.selectedMarker = bridge.chosenPOIMarker
+            mapView.animate(with: GMSCameraUpdate.setTarget(bridge.chosenPOIMarker.position))
+            
+            print("You tapped \(name): \(placeID), \(location.latitude)/\(location.longitude)")
         }
     }
     
