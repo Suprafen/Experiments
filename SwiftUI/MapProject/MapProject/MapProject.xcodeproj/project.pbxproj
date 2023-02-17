@@ -18,6 +18,16 @@
 		E273E999299F87DC004C07A7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E998299F87DC004C07A7 /* BaseView.swift */; };
 		E273E99B299FA278004C07A7 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E99A299FA278004C07A7 /* MapViewRepresentable.swift */; };
 		E273E99E299FADDF004C07A7 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E99D299FADDF004C07A7 /* MapKitViewController.swift */; };
+		E273E9A1299FCF0D004C07A7 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9A0299FCF0D004C07A7 /* Feature.swift */; };
+		E273E9A4299FCFCB004C07A7 /* IMDFDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9A3299FCFCB004C07A7 /* IMDFDecoder.swift */; };
+		E273E9A6299FD1A7004C07A7 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9A5299FD1A7004C07A7 /* Unit.swift */; };
+		E273E9A8299FD28A004C07A7 /* Amenity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9A7299FD28A004C07A7 /* Amenity.swift */; };
+		E273E9AA299FD2C2004C07A7 /* LocalizedName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9A9299FD2C2004C07A7 /* LocalizedName.swift */; };
+		E273E9AC299FD2FD004C07A7 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9AB299FD2FD004C07A7 /* Anchor.swift */; };
+		E273E9AE299FD340004C07A7 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9AD299FD340004C07A7 /* Level.swift */; };
+		E273E9B0299FD3DB004C07A7 /* Opening.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9AF299FD3DB004C07A7 /* Opening.swift */; };
+		E273E9B2299FD42E004C07A7 /* Occupant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9B1299FD42E004C07A7 /* Occupant.swift */; };
+		E273E9B4299FD4A3004C07A7 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9B3299FD4A3004C07A7 /* Venue.swift */; };
 		E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */; };
 		E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BB1298968CB00EF6C89 /* ContentView.swift */; };
 		E2799BB4298968CC00EF6C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2799BB3298968CC00EF6C89 /* Assets.xcassets */; };
@@ -56,6 +66,16 @@
 		E273E998299F87DC004C07A7 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		E273E99A299FA278004C07A7 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		E273E99D299FADDF004C07A7 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		E273E9A0299FCF0D004C07A7 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		E273E9A3299FCFCB004C07A7 /* IMDFDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDFDecoder.swift; sourceTree = "<group>"; };
+		E273E9A5299FD1A7004C07A7 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		E273E9A7299FD28A004C07A7 /* Amenity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenity.swift; sourceTree = "<group>"; };
+		E273E9A9299FD2C2004C07A7 /* LocalizedName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedName.swift; sourceTree = "<group>"; };
+		E273E9AB299FD2FD004C07A7 /* Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		E273E9AD299FD340004C07A7 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		E273E9AF299FD3DB004C07A7 /* Opening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opening.swift; sourceTree = "<group>"; };
+		E273E9B1299FD42E004C07A7 /* Occupant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupant.swift; sourceTree = "<group>"; };
+		E273E9B3299FD4A3004C07A7 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		E2799BAC298968CB00EF6C89 /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProjectApp.swift; sourceTree = "<group>"; };
 		E2799BB1298968CB00EF6C89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +176,7 @@
 		E273E993299F875B004C07A7 /* App+MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				E273E99F299FCEF6004C07A7 /* IMDF+Model */,
 				E273E99C299FADD1004C07A7 /* Map */,
 				E273E997299F87C7004C07A7 /* MainInterface */,
 				E273E996299F87BF004C07A7 /* App */,
@@ -186,6 +207,23 @@
 				E273E99D299FADDF004C07A7 /* MapKitViewController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		E273E99F299FCEF6004C07A7 /* IMDF+Model */ = {
+			isa = PBXGroup;
+			children = (
+				E273E9A0299FCF0D004C07A7 /* Feature.swift */,
+				E273E9A5299FD1A7004C07A7 /* Unit.swift */,
+				E273E9A7299FD28A004C07A7 /* Amenity.swift */,
+				E273E9AB299FD2FD004C07A7 /* Anchor.swift */,
+				E273E9AD299FD340004C07A7 /* Level.swift */,
+				E273E9B1299FD42E004C07A7 /* Occupant.swift */,
+				E273E9AF299FD3DB004C07A7 /* Opening.swift */,
+				E273E9B3299FD4A3004C07A7 /* Venue.swift */,
+				E273E9A9299FD2C2004C07A7 /* LocalizedName.swift */,
+				E273E9A3299FCFCB004C07A7 /* IMDFDecoder.swift */,
+			);
+			path = "IMDF+Model";
 			sourceTree = "<group>";
 		};
 		E2799BA3298968CB00EF6C89 = {
@@ -458,17 +496,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E8EBFE299676C2002476E1 /* Direction+Decoding.swift in Sources */,
+				E273E9B4299FD4A3004C07A7 /* Venue.swift in Sources */,
 				E294EFB1298AAC960009278B /* MapViewControllerBridge.swift in Sources */,
+				E273E9A4299FCFCB004C07A7 /* IMDFDecoder.swift in Sources */,
 				E2E8EC04299676E2002476E1 /* Step+Decoding.swift in Sources */,
 				E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */,
 				E23CC83C2993ED5A0093D4C9 /* ResultsList.swift in Sources */,
+				E273E9A6299FD1A7004C07A7 /* Unit.swift in Sources */,
 				E273E995299F8778004C07A7 /* App+MapKit.swift in Sources */,
 				E273E99E299FADDF004C07A7 /* MapKitViewController.swift in Sources */,
 				E2E8EBFC29966C5F002476E1 /* Direction.swift in Sources */,
+				E273E9B2299FD42E004C07A7 /* Occupant.swift in Sources */,
+				E273E9AE299FD340004C07A7 /* Level.swift in Sources */,
 				E294EFA92989738E0009278B /* MapView.swift in Sources */,
 				E2E8EC0A2996923D002476E1 /* OverlayManager.swift in Sources */,
 				E294EFAC298AAC0E0009278B /* City.swift in Sources */,
 				E23CC8432993FDF70093D4C9 /* PlacesManager.swift in Sources */,
+				E273E9AA299FD2C2004C07A7 /* LocalizedName.swift in Sources */,
 				E273E999299F87DC004C07A7 /* BaseView.swift in Sources */,
 				E2E8EC00299676CC002476E1 /* Route+Decoding.swift in Sources */,
 				E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */,
@@ -479,13 +523,17 @@
 				E23CC83A2993E2FE0093D4C9 /* SearchBar.swift in Sources */,
 				E2E8EBF829966A52002476E1 /* Step.swift in Sources */,
 				E2E8EC0E29969464002476E1 /* AddOverlayButtonView.swift in Sources */,
+				E273E9B0299FD3DB004C07A7 /* Opening.swift in Sources */,
 				E2E8EC02299676D8002476E1 /* Leg+Decoding.swift in Sources */,
 				E2E8EBFA29966B5F002476E1 /* Leg.swift in Sources */,
 				E23CC83E2993F0940093D4C9 /* SearchManager.swift in Sources */,
 				E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */,
 				E2E8EBEB29950E55002476E1 /* PlaceDetails.swift in Sources */,
+				E273E9A8299FD28A004C07A7 /* Amenity.swift in Sources */,
 				E23CC8412993F8F50093D4C9 /* Place.swift in Sources */,
 				E23CC8462993FF9C0093D4C9 /* PlaceRow.swift in Sources */,
+				E273E9A1299FCF0D004C07A7 /* Feature.swift in Sources */,
+				E273E9AC299FD2FD004C07A7 /* Anchor.swift in Sources */,
 				E2401A8C29915E6000C95658 /* DirectionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

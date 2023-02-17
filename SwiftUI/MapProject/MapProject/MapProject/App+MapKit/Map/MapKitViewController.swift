@@ -20,4 +20,8 @@ class MapKitViewController: UIViewController {
         view.addSubview(map)
     }
     
+    
+    final class MapControllerDelegate: UIViewController, MKMapViewDelegate {
+        
+    }
 }
