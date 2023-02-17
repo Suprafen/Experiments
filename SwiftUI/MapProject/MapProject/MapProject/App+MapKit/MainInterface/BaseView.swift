@@ -16,7 +16,8 @@ struct BaseView: View {
         longitudinalMeters: 750)
     
     var body: some View {
-        Map(coordinateRegion: $region)
+        MapViewRepresentable()
+            .ignoresSafeArea()
     }
 }
 

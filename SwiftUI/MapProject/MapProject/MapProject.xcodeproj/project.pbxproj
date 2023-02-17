@@ -16,6 +16,8 @@
 		E2401A8C29915E6000C95658 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2401A8B29915E6000C95658 /* DirectionManager.swift */; };
 		E273E995299F8778004C07A7 /* App+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E994299F8778004C07A7 /* App+MapKit.swift */; };
 		E273E999299F87DC004C07A7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E998299F87DC004C07A7 /* BaseView.swift */; };
+		E273E99B299FA278004C07A7 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E99A299FA278004C07A7 /* MapViewRepresentable.swift */; };
+		E273E99E299FADDF004C07A7 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E99D299FADDF004C07A7 /* MapKitViewController.swift */; };
 		E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */; };
 		E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BB1298968CB00EF6C89 /* ContentView.swift */; };
 		E2799BB4298968CC00EF6C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2799BB3298968CC00EF6C89 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		E2401A8B29915E6000C95658 /* DirectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
 		E273E994299F8778004C07A7 /* App+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+MapKit.swift"; sourceTree = "<group>"; };
 		E273E998299F87DC004C07A7 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E273E99A299FA278004C07A7 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		E273E99D299FADDF004C07A7 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		E2799BAC298968CB00EF6C89 /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProjectApp.swift; sourceTree = "<group>"; };
 		E2799BB1298968CB00EF6C89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		E273E993299F875B004C07A7 /* App+MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				E273E99C299FADD1004C07A7 /* Map */,
 				E273E997299F87C7004C07A7 /* MainInterface */,
 				E273E996299F87BF004C07A7 /* App */,
 			);
@@ -170,8 +175,17 @@
 			isa = PBXGroup;
 			children = (
 				E273E998299F87DC004C07A7 /* BaseView.swift */,
+				E273E99A299FA278004C07A7 /* MapViewRepresentable.swift */,
 			);
 			path = MainInterface;
+			sourceTree = "<group>";
+		};
+		E273E99C299FADD1004C07A7 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E273E99D299FADDF004C07A7 /* MapKitViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		E2799BA3298968CB00EF6C89 = {
@@ -449,6 +463,7 @@
 				E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */,
 				E23CC83C2993ED5A0093D4C9 /* ResultsList.swift in Sources */,
 				E273E995299F8778004C07A7 /* App+MapKit.swift in Sources */,
+				E273E99E299FADDF004C07A7 /* MapKitViewController.swift in Sources */,
 				E2E8EBFC29966C5F002476E1 /* Direction.swift in Sources */,
 				E294EFA92989738E0009278B /* MapView.swift in Sources */,
 				E2E8EC0A2996923D002476E1 /* OverlayManager.swift in Sources */,
@@ -459,6 +474,7 @@
 				E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */,
 				E2E8EBF0299526F1002476E1 /* PlaceDetailsView.swift in Sources */,
 				E294EFAF298AAC860009278B /* MapViewController.swift in Sources */,
+				E273E99B299FA278004C07A7 /* MapViewRepresentable.swift in Sources */,
 				E2E8EBF629966A37002476E1 /* Route.swift in Sources */,
 				E23CC83A2993E2FE0093D4C9 /* SearchBar.swift in Sources */,
 				E2E8EBF829966A52002476E1 /* Step.swift in Sources */,
