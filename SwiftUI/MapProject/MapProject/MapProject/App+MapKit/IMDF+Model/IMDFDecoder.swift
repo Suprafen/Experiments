@@ -74,8 +74,8 @@ class IMDFDecoder {
         venue.levelsByOrdinal = Dictionary(grouping: levels, by: { $0.properties.ordinal })
         
         // Associate Units and Opening to levels.
-        let unitsByLevel = Dictionary(grouping: units, by: { $0.properties.levelId })
-        let openingsByLevel = Dictionary(grouping: openings, by: { $0.properties.levelId })
+        let unitsByLevel = Dictionary(grouping: units, by: { $0.properties.levelID })
+        let openingsByLevel = Dictionary(grouping: openings, by: { $0.properties.levelID })
 
         // Associate each Level with its corresponding Units and Openings.
         for level in levels {

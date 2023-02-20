@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-class Occupant: Feature<Occupant.Properties> {
+class Occupant: Feature<Occupant.Properties>, MKAnnotation {
     struct Properties: Codable {
         let category: String
         let name: LocalizedName

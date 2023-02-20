@@ -14,6 +14,7 @@
 		E23CC8432993FDF70093D4C9 /* PlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CC8422993FDF70093D4C9 /* PlacesManager.swift */; };
 		E23CC8462993FF9C0093D4C9 /* PlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CC8452993FF9C0093D4C9 /* PlaceRow.swift */; };
 		E2401A8C29915E6000C95658 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2401A8B29915E6000C95658 /* DirectionManager.swift */; };
+		E273738C29A3BC2F0067F57B /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273738B29A3BC2F0067F57B /* TutorialViewController.swift */; };
 		E273E995299F8778004C07A7 /* App+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E994299F8778004C07A7 /* App+MapKit.swift */; };
 		E273E999299F87DC004C07A7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E998299F87DC004C07A7 /* BaseView.swift */; };
 		E273E99B299FA278004C07A7 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E99A299FA278004C07A7 /* MapViewRepresentable.swift */; };
@@ -28,6 +29,19 @@
 		E273E9B0299FD3DB004C07A7 /* Opening.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9AF299FD3DB004C07A7 /* Opening.swift */; };
 		E273E9B2299FD42E004C07A7 /* Occupant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9B1299FD42E004C07A7 /* Occupant.swift */; };
 		E273E9B4299FD4A3004C07A7 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9B3299FD4A3004C07A7 /* Venue.swift */; };
+		E273E9B7299FE800004C07A7 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E9B6299FE800004C07A7 /* Styles.swift */; };
+		E273E9C6299FEB1F004C07A7 /* level.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9B9299FEB1F004C07A7 /* level.geojson */; };
+		E273E9C7299FEB1F004C07A7 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = E273E9BB299FEB1F004C07A7 /* LICENSE.txt */; };
+		E273E9C8299FEB1F004C07A7 /* occupant.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9BC299FEB1F004C07A7 /* occupant.geojson */; };
+		E273E9C9299FEB1F004C07A7 /* building.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9BD299FEB1F004C07A7 /* building.geojson */; };
+		E273E9CA299FEB1F004C07A7 /* unit.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9BE299FEB1F004C07A7 /* unit.geojson */; };
+		E273E9CB299FEB1F004C07A7 /* amenity.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9BF299FEB1F004C07A7 /* amenity.geojson */; };
+		E273E9CC299FEB1F004C07A7 /* opening.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9C0299FEB1F004C07A7 /* opening.geojson */; };
+		E273E9CD299FEB1F004C07A7 /* footprint.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9C1299FEB1F004C07A7 /* footprint.geojson */; };
+		E273E9CE299FEB1F004C07A7 /* anchor.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9C2299FEB1F004C07A7 /* anchor.geojson */; };
+		E273E9CF299FEB1F004C07A7 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = E273E9C3299FEB1F004C07A7 /* manifest.json */; };
+		E273E9D0299FEB1F004C07A7 /* address.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9C4299FEB1F004C07A7 /* address.geojson */; };
+		E273E9D1299FEB1F004C07A7 /* venue.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E273E9C5299FEB1F004C07A7 /* venue.geojson */; };
 		E2799BB0298968CB00EF6C89 /* MapProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */; };
 		E2799BB2298968CB00EF6C89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2799BB1298968CB00EF6C89 /* ContentView.swift */; };
 		E2799BB4298968CC00EF6C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2799BB3298968CC00EF6C89 /* Assets.xcassets */; };
@@ -62,6 +76,7 @@
 		E23CC8422993FDF70093D4C9 /* PlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesManager.swift; sourceTree = "<group>"; };
 		E23CC8452993FF9C0093D4C9 /* PlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRow.swift; sourceTree = "<group>"; };
 		E2401A8B29915E6000C95658 /* DirectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
+		E273738B29A3BC2F0067F57B /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		E273E994299F8778004C07A7 /* App+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+MapKit.swift"; sourceTree = "<group>"; };
 		E273E998299F87DC004C07A7 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		E273E99A299FA278004C07A7 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
@@ -76,6 +91,19 @@
 		E273E9AF299FD3DB004C07A7 /* Opening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opening.swift; sourceTree = "<group>"; };
 		E273E9B1299FD42E004C07A7 /* Occupant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupant.swift; sourceTree = "<group>"; };
 		E273E9B3299FD4A3004C07A7 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		E273E9B6299FE800004C07A7 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		E273E9B9299FEB1F004C07A7 /* level.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level.geojson; sourceTree = "<group>"; };
+		E273E9BB299FEB1F004C07A7 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		E273E9BC299FEB1F004C07A7 /* occupant.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = occupant.geojson; sourceTree = "<group>"; };
+		E273E9BD299FEB1F004C07A7 /* building.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = building.geojson; sourceTree = "<group>"; };
+		E273E9BE299FEB1F004C07A7 /* unit.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unit.geojson; sourceTree = "<group>"; };
+		E273E9BF299FEB1F004C07A7 /* amenity.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amenity.geojson; sourceTree = "<group>"; };
+		E273E9C0299FEB1F004C07A7 /* opening.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = opening.geojson; sourceTree = "<group>"; };
+		E273E9C1299FEB1F004C07A7 /* footprint.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = footprint.geojson; sourceTree = "<group>"; };
+		E273E9C2299FEB1F004C07A7 /* anchor.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = anchor.geojson; sourceTree = "<group>"; };
+		E273E9C3299FEB1F004C07A7 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		E273E9C4299FEB1F004C07A7 /* address.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = address.geojson; sourceTree = "<group>"; };
+		E273E9C5299FEB1F004C07A7 /* venue.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = venue.geojson; sourceTree = "<group>"; };
 		E2799BAC298968CB00EF6C89 /* MapProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2799BAF298968CB00EF6C89 /* MapProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProjectApp.swift; sourceTree = "<group>"; };
 		E2799BB1298968CB00EF6C89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +186,14 @@
 			path = Places;
 			sourceTree = "<group>";
 		};
+		E273738A29A3BC0A0067F57B /* Tutorial App */ = {
+			isa = PBXGroup;
+			children = (
+				E273738B29A3BC2F0067F57B /* TutorialViewController.swift */,
+			);
+			path = "Tutorial App";
+			sourceTree = "<group>";
+		};
 		E273E992299F8718004C07A7 /* App+GoogleMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +212,7 @@
 		E273E993299F875B004C07A7 /* App+MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				E273E9B5299FE7ED004C07A7 /* Lib */,
 				E273E99F299FCEF6004C07A7 /* IMDF+Model */,
 				E273E99C299FADD1004C07A7 /* Map */,
 				E273E997299F87C7004C07A7 /* MainInterface */,
@@ -226,6 +263,41 @@
 			path = "IMDF+Model";
 			sourceTree = "<group>";
 		};
+		E273E9B5299FE7ED004C07A7 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E273E9B6299FE800004C07A7 /* Styles.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E273E9B8299FEB1F004C07A7 /* IMDFData */ = {
+			isa = PBXGroup;
+			children = (
+				E273E9B9299FEB1F004C07A7 /* level.geojson */,
+				E273E9BA299FEB1F004C07A7 /* LICENSE */,
+				E273E9BC299FEB1F004C07A7 /* occupant.geojson */,
+				E273E9BD299FEB1F004C07A7 /* building.geojson */,
+				E273E9BE299FEB1F004C07A7 /* unit.geojson */,
+				E273E9BF299FEB1F004C07A7 /* amenity.geojson */,
+				E273E9C0299FEB1F004C07A7 /* opening.geojson */,
+				E273E9C1299FEB1F004C07A7 /* footprint.geojson */,
+				E273E9C2299FEB1F004C07A7 /* anchor.geojson */,
+				E273E9C3299FEB1F004C07A7 /* manifest.json */,
+				E273E9C4299FEB1F004C07A7 /* address.geojson */,
+				E273E9C5299FEB1F004C07A7 /* venue.geojson */,
+			);
+			path = IMDFData;
+			sourceTree = "<group>";
+		};
+		E273E9BA299FEB1F004C07A7 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				E273E9BB299FEB1F004C07A7 /* LICENSE.txt */,
+			);
+			path = LICENSE;
+			sourceTree = "<group>";
+		};
 		E2799BA3298968CB00EF6C89 = {
 			isa = PBXGroup;
 			children = (
@@ -247,9 +319,11 @@
 		E2799BAE298968CB00EF6C89 /* MapProject */ = {
 			isa = PBXGroup;
 			children = (
+				E273738A29A3BC0A0067F57B /* Tutorial App */,
 				E2799BB5298968CC00EF6C89 /* Preview Content */,
 				E273E993299F875B004C07A7 /* App+MapKit */,
 				E273E992299F8718004C07A7 /* App+GoogleMap */,
+				E273E9B8299FEB1F004C07A7 /* IMDFData */,
 			);
 			path = MapProject;
 			sourceTree = "<group>";
@@ -408,6 +482,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E273E9C8299FEB1F004C07A7 /* occupant.geojson in Resources */,
+				E273E9C9299FEB1F004C07A7 /* building.geojson in Resources */,
+				E273E9CE299FEB1F004C07A7 /* anchor.geojson in Resources */,
+				E273E9CC299FEB1F004C07A7 /* opening.geojson in Resources */,
+				E273E9D1299FEB1F004C07A7 /* venue.geojson in Resources */,
+				E273E9D0299FEB1F004C07A7 /* address.geojson in Resources */,
+				E273E9C7299FEB1F004C07A7 /* LICENSE.txt in Resources */,
+				E273E9CF299FEB1F004C07A7 /* manifest.json in Resources */,
+				E273E9CD299FEB1F004C07A7 /* footprint.geojson in Resources */,
+				E273E9CB299FEB1F004C07A7 /* amenity.geojson in Resources */,
+				E273E9CA299FEB1F004C07A7 /* unit.geojson in Resources */,
+				E273E9C6299FEB1F004C07A7 /* level.geojson in Resources */,
 				E2799BB4298968CC00EF6C89 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +603,7 @@
 				E2E8EC00299676CC002476E1 /* Route+Decoding.swift in Sources */,
 				E2E8EBEE29952469002476E1 /* APIKEys.swift in Sources */,
 				E2E8EBF0299526F1002476E1 /* PlaceDetailsView.swift in Sources */,
+				E273738C29A3BC2F0067F57B /* TutorialViewController.swift in Sources */,
 				E294EFAF298AAC860009278B /* MapViewController.swift in Sources */,
 				E273E99B299FA278004C07A7 /* MapViewRepresentable.swift in Sources */,
 				E2E8EBF629966A37002476E1 /* Route.swift in Sources */,
@@ -533,6 +620,7 @@
 				E23CC8412993F8F50093D4C9 /* Place.swift in Sources */,
 				E23CC8462993FF9C0093D4C9 /* PlaceRow.swift in Sources */,
 				E273E9A1299FCF0D004C07A7 /* Feature.swift in Sources */,
+				E273E9B7299FE800004C07A7 /* Styles.swift in Sources */,
 				E273E9AC299FD2FD004C07A7 /* Anchor.swift in Sources */,
 				E2401A8C29915E6000C95658 /* DirectionManager.swift in Sources */,
 			);
