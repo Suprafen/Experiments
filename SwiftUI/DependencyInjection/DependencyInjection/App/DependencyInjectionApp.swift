@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import APIKit
 
 @main
 struct DependencyInjectionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(productsManager: ProductsManager(dataFetcher: APIKitLoader()))
         }
     }
 }
