@@ -21,6 +21,12 @@ struct ContentView: View {
                 } label: {
                     GeometryItemLabel(title: "Shape", shapeType: .shape, color: .blue)
                 }
+                
+                NavigationLink {
+                    CGAffineTransformView()
+                } label: {
+                    GeometryItemLabel(title: "Transform", shapeType: .path, color: .orange)
+                }
             }
             .navigationTitle("Geometry")
         }

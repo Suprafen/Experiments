@@ -16,6 +16,7 @@
 		E201445629BB3F8D002B4AA5 /* GeometryItemLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445529BB3F8D002B4AA5 /* GeometryItemLabel.swift */; };
 		E201445829BB405E002B4AA5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445729BB405E002B4AA5 /* ViewModel.swift */; };
 		E201445A29BB4B83002B4AA5 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445929BB4B83002B4AA5 /* ShapeType.swift */; };
+		E201445C29BB6157002B4AA5 /* CGAffineTransofrmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E201445529BB3F8D002B4AA5 /* GeometryItemLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryItemLabel.swift; sourceTree = "<group>"; };
 		E201445729BB405E002B4AA5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E201445929BB4B83002B4AA5 /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
+		E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransofrmView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				E201444F29BB31E5002B4AA5 /* PathView.swift */,
 				E201445329BB359E002B4AA5 /* ShapeView.swift */,
+				E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */,
 			);
 			path = GeomtetryViews;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E201445C29BB6157002B4AA5 /* CGAffineTransofrmView.swift in Sources */,
 				E201444429BB2FDD002B4AA5 /* ContentView.swift in Sources */,
 				E201445029BB31E5002B4AA5 /* PathView.swift in Sources */,
 				E201445429BB359E002B4AA5 /* ShapeView.swift in Sources */,
