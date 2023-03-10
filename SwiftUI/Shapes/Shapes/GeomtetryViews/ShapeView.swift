@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Triangle: Shape {
+fileprivate struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -22,7 +22,7 @@ struct Triangle: Shape {
     }
 }
 
-struct Arc: Shape {
+fileprivate struct Arc: Shape {
     
     let startAngle: Angle
     let endAngle: Angle

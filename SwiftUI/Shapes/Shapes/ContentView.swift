@@ -14,9 +14,12 @@ struct ContentView: View {
                 NavigationLink {
                     PathView()
                 } label: {
-                    // TODO: Make Corresponding rounded corners rectangles for each label
-                    // Better just make a separate view
-                    Text("Path")
+                    GeometryItemLabel(title: "Path", shapeType: .path, color: .red)
+                }
+                NavigationLink {
+                    ShapeView()
+                } label: {
+                    GeometryItemLabel(title: "Shape", shapeType: .shape, color: .blue)
                 }
             }
             .navigationTitle("Geometry")

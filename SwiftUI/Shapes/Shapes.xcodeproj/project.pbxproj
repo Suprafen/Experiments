@@ -13,6 +13,9 @@
 		E201444929BB2FDF002B4AA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E201444829BB2FDF002B4AA5 /* Preview Assets.xcassets */; };
 		E201445029BB31E5002B4AA5 /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201444F29BB31E5002B4AA5 /* PathView.swift */; };
 		E201445429BB359E002B4AA5 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445329BB359E002B4AA5 /* ShapeView.swift */; };
+		E201445629BB3F8D002B4AA5 /* GeometryItemLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445529BB3F8D002B4AA5 /* GeometryItemLabel.swift */; };
+		E201445829BB405E002B4AA5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445729BB405E002B4AA5 /* ViewModel.swift */; };
+		E201445A29BB4B83002B4AA5 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445929BB4B83002B4AA5 /* ShapeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		E201444829BB2FDF002B4AA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E201444F29BB31E5002B4AA5 /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
 		E201445329BB359E002B4AA5 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		E201445529BB3F8D002B4AA5 /* GeometryItemLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryItemLabel.swift; sourceTree = "<group>"; };
+		E201445729BB405E002B4AA5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E201445929BB4B83002B4AA5 /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 			children = (
 				E201444129BB2FDD002B4AA5 /* ShapesApp.swift */,
 				E201444329BB2FDD002B4AA5 /* ContentView.swift */,
+				E201445529BB3F8D002B4AA5 /* GeometryItemLabel.swift */,
+				E201445929BB4B83002B4AA5 /* ShapeType.swift */,
+				E201445729BB405E002B4AA5 /* ViewModel.swift */,
 				E201445129BB333E002B4AA5 /* GeomtetryViews */,
 				E201444529BB2FDF002B4AA5 /* Assets.xcassets */,
 				E201444729BB2FDF002B4AA5 /* Preview Content */,
@@ -175,6 +184,9 @@
 				E201444429BB2FDD002B4AA5 /* ContentView.swift in Sources */,
 				E201445029BB31E5002B4AA5 /* PathView.swift in Sources */,
 				E201445429BB359E002B4AA5 /* ShapeView.swift in Sources */,
+				E201445629BB3F8D002B4AA5 /* GeometryItemLabel.swift in Sources */,
+				E201445829BB405E002B4AA5 /* ViewModel.swift in Sources */,
+				E201445A29BB4B83002B4AA5 /* ShapeType.swift in Sources */,
 				E201444229BB2FDD002B4AA5 /* ShapesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
