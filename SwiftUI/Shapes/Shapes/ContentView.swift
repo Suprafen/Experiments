@@ -27,6 +27,12 @@ struct ContentView: View {
                 } label: {
                     GeometryItemLabel(title: "Transform", shapeType: .path, color: .orange)
                 }
+                
+                NavigationLink {
+                    CreateBordersView()
+                } label: {
+                    GeometryItemLabel(title: "Creative border", shapeType: .shape, color: .purple)
+                }
             }
             .navigationTitle("Geometry")
         }

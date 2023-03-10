@@ -17,6 +17,7 @@
 		E201445829BB405E002B4AA5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445729BB405E002B4AA5 /* ViewModel.swift */; };
 		E201445A29BB4B83002B4AA5 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445929BB4B83002B4AA5 /* ShapeType.swift */; };
 		E201445C29BB6157002B4AA5 /* CGAffineTransofrmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */; };
+		E201445E29BB67A5002B4AA5 /* CreativeBordersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445D29BB67A4002B4AA5 /* CreativeBordersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E201445729BB405E002B4AA5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E201445929BB4B83002B4AA5 /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
 		E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransofrmView.swift; sourceTree = "<group>"; };
+		E201445D29BB67A4002B4AA5 /* CreativeBordersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativeBordersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				E201444F29BB31E5002B4AA5 /* PathView.swift */,
 				E201445329BB359E002B4AA5 /* ShapeView.swift */,
 				E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */,
+				E201445D29BB67A4002B4AA5 /* CreativeBordersView.swift */,
 			);
 			path = GeomtetryViews;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				E201445C29BB6157002B4AA5 /* CGAffineTransofrmView.swift in Sources */,
 				E201444429BB2FDD002B4AA5 /* ContentView.swift in Sources */,
+				E201445E29BB67A5002B4AA5 /* CreativeBordersView.swift in Sources */,
 				E201445029BB31E5002B4AA5 /* PathView.swift in Sources */,
 				E201445429BB359E002B4AA5 /* ShapeView.swift in Sources */,
 				E201445629BB3F8D002B4AA5 /* GeometryItemLabel.swift in Sources */,
