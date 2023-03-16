@@ -36,7 +36,13 @@ struct StoryView: View {
             }
             .frame(width: width * 0.95, height: height * 0.95)
             CircleShape(startAngle: .degrees(0), endAngle: .degrees(360), clockwise: true)
-                .strokeBorder(.red, style: StrokeStyle(lineWidth: width * 0.05, lineCap: .round, lineJoin: .round))
+                .strokeBorder(
+                    LinearGradient(
+                        colors: [.purple, .purple, .pink, .red,.orange, .yellow, .yellow],
+                        startPoint: .topTrailing,
+                        endPoint: .bottomLeading
+                    )
+                    , style: StrokeStyle(lineWidth: width * 0.05, lineCap: .round, lineJoin: .round))
                 .frame(width: width, height: height)
                 .opacity(storyWatched ? 0 : 1)
         }
