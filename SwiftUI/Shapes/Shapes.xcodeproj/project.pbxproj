@@ -18,6 +18,8 @@
 		E201445A29BB4B83002B4AA5 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445929BB4B83002B4AA5 /* ShapeType.swift */; };
 		E201445C29BB6157002B4AA5 /* CGAffineTransofrmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */; };
 		E201445E29BB67A5002B4AA5 /* CreativeBordersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445D29BB67A4002B4AA5 /* CreativeBordersView.swift */; };
+		E201446029BB91B6002B4AA5 /* AnimatedCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201445F29BB91B6002B4AA5 /* AnimatedCircleView.swift */; };
+		E2BD645129C20BFD008B03E6 /* HapticsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BD645029C20BFD008B03E6 /* HapticsPlayground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		E201445929BB4B83002B4AA5 /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
 		E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransofrmView.swift; sourceTree = "<group>"; };
 		E201445D29BB67A4002B4AA5 /* CreativeBordersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativeBordersView.swift; sourceTree = "<group>"; };
+		E201445F29BB91B6002B4AA5 /* AnimatedCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCircleView.swift; sourceTree = "<group>"; };
+		E2BD645029C20BFD008B03E6 /* HapticsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsPlayground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				E201445529BB3F8D002B4AA5 /* GeometryItemLabel.swift */,
 				E201445929BB4B83002B4AA5 /* ShapeType.swift */,
 				E201445729BB405E002B4AA5 /* ViewModel.swift */,
+				E2BD644F29C20BDE008B03E6 /* OtherViews */,
 				E201445129BB333E002B4AA5 /* GeomtetryViews */,
 				E201444529BB2FDF002B4AA5 /* Assets.xcassets */,
 				E201444729BB2FDF002B4AA5 /* Preview Content */,
@@ -92,8 +97,17 @@
 				E201445329BB359E002B4AA5 /* ShapeView.swift */,
 				E201445B29BB6157002B4AA5 /* CGAffineTransofrmView.swift */,
 				E201445D29BB67A4002B4AA5 /* CreativeBordersView.swift */,
+				E201445F29BB91B6002B4AA5 /* AnimatedCircleView.swift */,
 			);
 			path = GeomtetryViews;
+			sourceTree = "<group>";
+		};
+		E2BD644F29C20BDE008B03E6 /* OtherViews */ = {
+			isa = PBXGroup;
+			children = (
+				E2BD645029C20BFD008B03E6 /* HapticsPlayground.swift */,
+			);
+			path = OtherViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +208,8 @@
 				E201445429BB359E002B4AA5 /* ShapeView.swift in Sources */,
 				E201445629BB3F8D002B4AA5 /* GeometryItemLabel.swift in Sources */,
 				E201445829BB405E002B4AA5 /* ViewModel.swift in Sources */,
+				E201446029BB91B6002B4AA5 /* AnimatedCircleView.swift in Sources */,
+				E2BD645129C20BFD008B03E6 /* HapticsPlayground.swift in Sources */,
 				E201445A29BB4B83002B4AA5 /* ShapeType.swift in Sources */,
 				E201444229BB2FDD002B4AA5 /* ShapesApp.swift in Sources */,
 			);
@@ -332,6 +348,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +378,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

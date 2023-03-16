@@ -33,6 +33,18 @@ struct ContentView: View {
                 } label: {
                     GeometryItemLabel(title: "Creative border", shapeType: .shape, color: .purple)
                 }
+                
+                NavigationLink {
+                    AnimatedCircleView()
+                } label: {
+                    GeometryItemLabel(title: "AnimatedCircleView", shapeType: .path, color: .pink)
+                }
+                
+                NavigationLink {
+                    HapticsPlayground()
+                } label: {
+                    GeometryItemLabel(title: "Haptics", shapeType: .shape, color: .indigo)
+                }
             }
             .navigationTitle("Geometry")
         }
