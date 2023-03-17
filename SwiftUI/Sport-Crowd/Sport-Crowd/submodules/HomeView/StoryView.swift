@@ -35,6 +35,7 @@ struct StoryView: View {
                     .opacity(0.1)
             }
             .frame(width: width * 0.95, height: height * 0.95)
+            // TODO: Make the view animatable after tapping on it, like instagram does.
             CircleShape(startAngle: .degrees(0), endAngle: .degrees(360), clockwise: true)
                 .strokeBorder(
                     LinearGradient(

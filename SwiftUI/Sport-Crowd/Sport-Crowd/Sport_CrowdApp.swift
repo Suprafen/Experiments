@@ -11,10 +11,12 @@ import SwiftUI
 struct Sport_CrowdApp: App {
     
     @StateObject var storyVM = StoriesViewModel()
+    @StateObject var gameManager = GameManager()
     
     var body: some Scene {
         WindowGroup {
             TabViewController(storyVM: storyVM)
+                .environmentObject(gameManager)
         }
     }
 }

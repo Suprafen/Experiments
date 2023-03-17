@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject private var storyVM: StoriesViewModel
+    @EnvironmentObject private var gameManager: GameManager
     
     init(storyVM: StoriesViewModel) {
         self.storyVM = storyVM
@@ -17,14 +18,28 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                // MARK: Stories
                 ScrollView {
                     Rectangle()
                         .fill(.white)
-                        .frame(height: 20)
+                        .frame(height: 15)
                     StoriesScrollView(storyVM: storyVM)
-                    Spacer()
+                    
+                    // MARK: BroadCast Previews
+                    TabView {
+                        ForEach(gameManager.games) { game in
+                            VStack {
+                                PostView(game: game)
+                                    .frame(height: 450, alignment: .top)
+                                    .padding(.horizontal, 20)
+                                Spacer()
+                            }
+                        }
+                    }
+                    .tabViewStyle(.page(indexDisplayMode: .always))
+                    .indexViewStyle(.page(backgroundDisplayMode: .always))
+                    .frame(height: 500, alignment: .top)
                 }
-                
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

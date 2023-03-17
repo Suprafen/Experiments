@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E2B9616929C33C3F00B6D1C9 /* StoriesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9616829C33C3F00B6D1C9 /* StoriesScrollView.swift */; };
+		E2B9616D29C4800500B6D1C9 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9616C29C4800500B6D1C9 /* PostView.swift */; };
+		E2B9617029C486D800B6D1C9 /* CornerRadiusViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9616F29C486D800B6D1C9 /* CornerRadiusViewModifier.swift */; };
+		E2B9617229C48DED00B6D1C9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9617129C48DED00B6D1C9 /* Game.swift */; };
+		E2B9617429C48F3200B6D1C9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9617329C48F3200B6D1C9 /* Team.swift */; };
+		E2B9617629C499B600B6D1C9 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9617529C499B600B6D1C9 /* GameManager.swift */; };
+		E2B9617929C49A1000B6D1C9 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9617829C49A1000B6D1C9 /* Mocks.swift */; };
 		E2BD645F29C3214B008B03E6 /* Sport_CrowdApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BD645E29C3214B008B03E6 /* Sport_CrowdApp.swift */; };
 		E2BD646129C3214B008B03E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BD646029C3214B008B03E6 /* HomeView.swift */; };
 		E2BD646329C3214D008B03E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BD646229C3214D008B03E6 /* Assets.xcassets */; };
@@ -23,6 +29,12 @@
 
 /* Begin PBXFileReference section */
 		E2B9616829C33C3F00B6D1C9 /* StoriesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollView.swift; sourceTree = "<group>"; };
+		E2B9616C29C4800500B6D1C9 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		E2B9616F29C486D800B6D1C9 /* CornerRadiusViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusViewModifier.swift; sourceTree = "<group>"; };
+		E2B9617129C48DED00B6D1C9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		E2B9617329C48F3200B6D1C9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		E2B9617529C499B600B6D1C9 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		E2B9617829C49A1000B6D1C9 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		E2BD645B29C3214B008B03E6 /* Sport-Crowd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sport-Crowd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BD645E29C3214B008B03E6 /* Sport_CrowdApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport_CrowdApp.swift; sourceTree = "<group>"; };
 		E2BD646029C3214B008B03E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -48,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2B9616E29C486B400B6D1C9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9616F29C486D800B6D1C9 /* CornerRadiusViewModifier.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E2B9617729C49A0600B6D1C9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9617829C49A1000B6D1C9 /* Mocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		E2BD645229C3214B008B03E6 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +114,7 @@
 		E2BD646C29C32161008B03E6 /* submodules */ = {
 			isa = PBXGroup;
 			children = (
+				E2B9616E29C486B400B6D1C9 /* Lib */,
 				E2BD647F29C32C49008B03E6 /* Core */,
 				E2BD647C29C32A3B008B03E6 /* DataManagers */,
 				E2BD647929C32579008B03E6 /* TabView */,
@@ -103,6 +132,7 @@
 				E2BD646029C3214B008B03E6 /* HomeView.swift */,
 				E2BD647A29C3263D008B03E6 /* StoryView.swift */,
 				E2B9616829C33C3F00B6D1C9 /* StoriesScrollView.swift */,
+				E2B9616C29C4800500B6D1C9 /* PostView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -142,7 +172,9 @@
 		E2BD647C29C32A3B008B03E6 /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
+				E2B9617729C49A0600B6D1C9 /* Mocks */,
 				E2BD647D29C32A50008B03E6 /* StoriesViewModel.swift */,
+				E2B9617529C499B600B6D1C9 /* GameManager.swift */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -151,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				E2BD648029C32C55008B03E6 /* Story.swift */,
+				E2B9617129C48DED00B6D1C9 /* Game.swift */,
+				E2B9617329C48F3200B6D1C9 /* Team.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -225,16 +259,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B9617029C486D800B6D1C9 /* CornerRadiusViewModifier.swift in Sources */,
 				E2BD646E29C3219C008B03E6 /* TabViewController.swift in Sources */,
 				E2BD647029C32299008B03E6 /* ScheduleView.swift in Sources */,
+				E2B9617929C49A1000B6D1C9 /* Mocks.swift in Sources */,
+				E2B9617229C48DED00B6D1C9 /* Game.swift in Sources */,
+				E2B9617629C499B600B6D1C9 /* GameManager.swift in Sources */,
 				E2BD647429C322F7008B03E6 /* BroadcastsView.swift in Sources */,
 				E2BD647B29C3263D008B03E6 /* StoryView.swift in Sources */,
 				E2BD647229C322AD008B03E6 /* ProfileView.swift in Sources */,
 				E2BD646129C3214B008B03E6 /* HomeView.swift in Sources */,
 				E2BD647E29C32A50008B03E6 /* StoriesViewModel.swift in Sources */,
 				E2BD645F29C3214B008B03E6 /* Sport_CrowdApp.swift in Sources */,
+				E2B9617429C48F3200B6D1C9 /* Team.swift in Sources */,
 				E2BD648129C32C55008B03E6 /* Story.swift in Sources */,
 				E2B9616929C33C3F00B6D1C9 /* StoriesScrollView.swift in Sources */,
+				E2B9616D29C4800500B6D1C9 /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
