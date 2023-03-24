@@ -11,7 +11,8 @@ import SwiftUI
 struct CombineExperimentsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TwoTextFieldsView()
+            
         }
     }
 }

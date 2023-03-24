@@ -11,6 +11,7 @@
 		E29EDE5129CCA7CF0030F17A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EDE5029CCA7CF0030F17A /* ContentView.swift */; };
 		E29EDE5329CCA7D10030F17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29EDE5229CCA7D10030F17A /* Assets.xcassets */; };
 		E29EDE5629CCA7D10030F17A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29EDE5529CCA7D10030F17A /* Preview Assets.xcassets */; };
+		E29EDE5D29CCB0D20030F17A /* TwoTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EDE5C29CCB0D20030F17A /* TwoTextFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E29EDE5029CCA7CF0030F17A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E29EDE5229CCA7D10030F17A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29EDE5529CCA7D10030F17A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E29EDE5C29CCB0D20030F17A /* TwoTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTextFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E29EDE4E29CCA7CF0030F17A /* CombineExperimentsApp.swift */,
 				E29EDE5029CCA7CF0030F17A /* ContentView.swift */,
+				E29EDE5C29CCB0D20030F17A /* TwoTextFields.swift */,
 				E29EDE5229CCA7D10030F17A /* Assets.xcassets */,
 				E29EDE5429CCA7D10030F17A /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				E29EDE5129CCA7CF0030F17A /* ContentView.swift in Sources */,
 				E29EDE4F29CCA7CF0030F17A /* CombineExperimentsApp.swift in Sources */,
+				E29EDE5D29CCB0D20030F17A /* TwoTextFields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
