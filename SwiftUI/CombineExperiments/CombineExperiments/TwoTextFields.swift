@@ -12,8 +12,9 @@ class TwoTextFieldViewModel: ObservableObject {
     
     @Published var passwordText: String = ""
     @Published var repeatPasswordText: String = ""
-    
     @Published var passwordsIdentical: Bool = false
+    @Published var buttonIsActive: Bool = false
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -62,10 +63,10 @@ class TwoTextFieldViewModel: ObservableObject {
         $passwordsIdentical
             .combineLatest($repeatPasswordText, $repeatPasswordText)
             .sink { passwordsIdentical, passwordText, repeatPasswordText in
-                if passwordText.count > 0 && repeatPasswordText.count > 0 {
-                    self.passwordsIdentical = passwordsIdentical
+                if (passwordText.count > 0 && repeatPasswordText.count > 0) && passwordsIdentical {
+                    self.buttonIsActive = true
                 } else {
-                    self.passwordsIdentical = false
+                    self.buttonIsActive = false
                 }
             }
             .store(in: &cancellables)
@@ -79,17 +80,30 @@ struct TwoTextFieldsView: View {
     
     var body: some View {
         VStack {
-            TextField("Create new password", text: $vm.passwordText, axis: .horizontal)
+            
+            SecureField("Create new password", text: $vm.passwordText)
                 .padding(10)
                 .lineLimit(1)
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
             
-            TextField("Repeat your password", text: $vm.repeatPasswordText, axis: .horizontal)
+            SecureField("Repeat your password", text: $vm.repeatPasswordText)
                 .padding(10)
                 .lineLimit(1)
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(.red, style: StrokeStyle(lineWidth: 1))
+                        .opacity((vm.passwordText.count > 0 && vm.repeatPasswordText.count > 0) ? (vm.passwordsIdentical ? 0 : 1) : 0)
+                )
+                .overlay(alignment: .trailing) {
+                    Text("Passwords do not match")
+                        .font(.footnote)
+                        .foregroundColor(.red)
+                        .padding(.trailing, 10)
+                        .opacity((vm.passwordText.count > 0 && vm.repeatPasswordText.count > 0) ? (vm.passwordsIdentical ? 0 : 1) : 0)
+                }
             
             Button {print(vm.passwordsIdentical)} label: {
                 Text("Sign Up")
@@ -97,10 +111,10 @@ struct TwoTextFieldsView: View {
                     .foregroundColor(.white)
                     .background(Color.blue)
                     .cornerRadius(10)
-                    .opacity(vm.passwordsIdentical ? 1 : 0.5)
-                    .onAppear{ print(vm.passwordsIdentical) }
+                    .opacity(vm.buttonIsActive ? 1 : 0.5)
+                    .onAppear{ print(vm.buttonIsActive) }
             }
-            .disabled(!vm.passwordsIdentical)
+            .disabled(!vm.buttonIsActive)
         }
         .padding(.horizontal, 20)
     }
