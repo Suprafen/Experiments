@@ -36,7 +36,9 @@ class TwoTextFieldViewModel: ObservableObject {
                 guard let self else { return }
                 
                 if !self.repeatPasswordText.isEmpty {
-                    self.passwordsIdentical = passwordsIdentical
+                    withAnimation(Animation.easeIn(duration: 0.25)) {
+                        self.passwordsIdentical = passwordsIdentical
+                    }
                 }
             }
             .store(in: &cancellables)
@@ -53,8 +55,9 @@ class TwoTextFieldViewModel: ObservableObject {
             }
             .sink { [weak self] passwordsIdentical in
                 guard let self else { return }
-                
-                self.passwordsIdentical = passwordsIdentical
+                withAnimation(Animation.easeIn(duration: 0.25)) {
+                    self.passwordsIdentical = passwordsIdentical
+                }
             }
             .store(in: &cancellables)
     }
