@@ -12,6 +12,11 @@
 		E29EDE5329CCA7D10030F17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29EDE5229CCA7D10030F17A /* Assets.xcassets */; };
 		E29EDE5629CCA7D10030F17A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29EDE5529CCA7D10030F17A /* Preview Assets.xcassets */; };
 		E29EDE5D29CCB0D20030F17A /* TwoTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EDE5C29CCB0D20030F17A /* TwoTextFields.swift */; };
+		E29EDE5F29CDDAA50030F17A /* ITunes+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EDE5E29CDDAA50030F17A /* ITunes+Networking.swift */; };
+		E29EDE6229CDDB070030F17A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E29EDE6129CDDB070030F17A /* SwiftyJSON */; };
+		E29EDE6429CDFF2A0030F17A /* ITunesSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EDE6329CDFF2A0030F17A /* ITunesSearchViewModel.swift */; };
+		E29EDE6629CE05680030F17A /* ITunesSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EDE6529CE05680030F17A /* ITunesSearchView.swift */; };
+		E29EDE6A29CE0F0E0030F17A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EDE6929CE0F0E0030F17A /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,10 @@
 		E29EDE5229CCA7D10030F17A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29EDE5529CCA7D10030F17A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E29EDE5C29CCB0D20030F17A /* TwoTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTextFields.swift; sourceTree = "<group>"; };
+		E29EDE5E29CDDAA50030F17A /* ITunes+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ITunes+Networking.swift"; sourceTree = "<group>"; };
+		E29EDE6329CDFF2A0030F17A /* ITunesSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchViewModel.swift; sourceTree = "<group>"; };
+		E29EDE6529CE05680030F17A /* ITunesSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchView.swift; sourceTree = "<group>"; };
+		E29EDE6929CE0F0E0030F17A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29EDE6229CDDB070030F17A /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,7 @@
 				E29EDE4E29CCA7CF0030F17A /* CombineExperimentsApp.swift */,
 				E29EDE5029CCA7CF0030F17A /* ContentView.swift */,
 				E29EDE5C29CCB0D20030F17A /* TwoTextFields.swift */,
+				E29EDE6729CE0EE30030F17A /* ITunesSearch */,
 				E29EDE5229CCA7D10030F17A /* Assets.xcassets */,
 				E29EDE5429CCA7D10030F17A /* Preview Content */,
 			);
@@ -68,6 +79,25 @@
 				E29EDE5529CCA7D10030F17A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E29EDE6729CE0EE30030F17A /* ITunesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E29EDE6829CE0EF40030F17A /* Views */,
+				E29EDE5E29CDDAA50030F17A /* ITunes+Networking.swift */,
+				E29EDE6329CDFF2A0030F17A /* ITunesSearchViewModel.swift */,
+				E29EDE6929CE0F0E0030F17A /* Product.swift */,
+			);
+			path = ITunesSearch;
+			sourceTree = "<group>";
+		};
+		E29EDE6829CE0EF40030F17A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E29EDE6529CE05680030F17A /* ITunesSearchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +116,9 @@
 			dependencies = (
 			);
 			name = CombineExperiments;
+			packageProductDependencies = (
+				E29EDE6129CDDB070030F17A /* SwiftyJSON */,
+			);
 			productName = CombineExperiments;
 			productReference = E29EDE4B29CCA7CF0030F17A /* CombineExperiments.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +147,9 @@
 				Base,
 			);
 			mainGroup = E29EDE4229CCA7CF0030F17A;
+			packageReferences = (
+				E29EDE6029CDDB070030F17A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = E29EDE4C29CCA7CF0030F17A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,7 +178,11 @@
 			files = (
 				E29EDE5129CCA7CF0030F17A /* ContentView.swift in Sources */,
 				E29EDE4F29CCA7CF0030F17A /* CombineExperimentsApp.swift in Sources */,
+				E29EDE6429CDFF2A0030F17A /* ITunesSearchViewModel.swift in Sources */,
 				E29EDE5D29CCB0D20030F17A /* TwoTextFields.swift in Sources */,
+				E29EDE6629CE05680030F17A /* ITunesSearchView.swift in Sources */,
+				E29EDE5F29CDDAA50030F17A /* ITunes+Networking.swift in Sources */,
+				E29EDE6A29CE0F0E0030F17A /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E29EDE6029CDDB070030F17A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E29EDE6129CDDB070030F17A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29EDE6029CDDB070030F17A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E29EDE4329CCA7CF0030F17A /* Project object */;
 }

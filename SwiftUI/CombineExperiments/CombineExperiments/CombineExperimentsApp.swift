@@ -11,8 +11,7 @@ import SwiftUI
 struct CombineExperimentsApp: App {
     var body: some Scene {
         WindowGroup {
-            TwoTextFieldsView()
-            
+            ITunesSearchView(searchViewModel: ITunesSearchViewModel(networkManager: ITunesNetworkManager()))
         }
     }
 }
